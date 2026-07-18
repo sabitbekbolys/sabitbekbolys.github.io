@@ -11,6 +11,7 @@ step, no JavaScript). Designed to be served by **GitHub Pages** at
 | `index.html` | About: bio, research interests, news, selected publications |
 | `publications.html` | Full list: preprints, journal articles, work in progress |
 | `teaching.html` | Lecturing, TA positions, mentoring |
+| `outreach.html` | Media appearances and interviews (YouTube embeds) |
 | `cv.html` | Positions, education, awards |
 | `css/style.css` | All styling (light + dark mode, one file) |
 | `assets/photo.jpg` | Profile photo |
@@ -26,12 +27,15 @@ open the web editor) or locally.
   links. Numbering updates automatically.
 - **Add a news item:** in `index.html`, copy a `<li>` inside `<ul class="news">`
   and put it at the top.
+- **Add a video:** in `outreach.html`, copy a `<li>` inside `<ul class="videos">`
+  and replace the YouTube ID in the iframe `src` (the part after `/embed/`)
+  and the title lines.
 - **Change photo:** replace `assets/photo.jpg` (roughly square works best).
 - **Offer a PDF CV:** put the file at `assets/cv.pdf` and un-comment the
   "Download CV" link near the top of `cv.html`.
 - **Colors / fonts:** the `:root` variables at the top of `css/style.css`.
-- The sidebar is repeated in each of the four HTML files — if you change it
-  (e.g. a new email), change it in all four.
+- The sidebar is repeated in each of the five HTML files — if you change it
+  (e.g. a new email), change it in all five.
 
 ## Preview locally
 
