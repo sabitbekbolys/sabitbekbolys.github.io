@@ -1,27 +1,61 @@
-# Academic Portfolio Website
+# Bolys Sabitbek — academic website
 
-This is a simple GitHub Pages-ready personal website for a mathematician.
+Personal academic portfolio, built as a plain static site (HTML + CSS, no build
+step, no JavaScript). Designed to be served by **GitHub Pages** at
+<https://sabitbekbolys.github.io>.
 
-## How to use it
+## Structure
 
-1. Replace `Your Name` in `index.html` with your real name.
-2. Replace the placeholder affiliation, research interests, publications, and links.
-3. Add your CV as `cv.pdf` if you want the CV button to work.
-4. Create a GitHub repository named `yourusername.github.io`.
-5. Upload these files to that repository.
-6. Open `https://yourusername.github.io` after GitHub Pages publishes it.
+| File | Purpose |
+| --- | --- |
+| `index.html` | About: bio, research interests, news, selected publications |
+| `publications.html` | Full list: preprints, journal articles, work in progress |
+| `teaching.html` | Lecturing, TA positions, mentoring |
+| `cv.html` | Positions, education, awards |
+| `css/style.css` | All styling (light + dark mode, one file) |
+| `assets/photo.jpg` | Profile photo |
+| `assets/favicon.svg` | Browser-tab icon (∂ monogram) |
 
-## Files
+## How to edit
 
-- `index.html` - website content
-- `styles.css` - visual design and responsive layout
-- `assets/math-hero.png` - hero image
+Everything is plain HTML — edit directly on GitHub (press `.` in the repo to
+open the web editor) or locally.
 
-## Suggested links to add
+- **Add a publication:** in `publications.html`, copy an existing
+  `<li>…</li>` block in the right section and edit authors / title / venue /
+  links. Numbering updates automatically.
+- **Add a news item:** in `index.html`, copy a `<li>` inside `<ul class="news">`
+  and put it at the top.
+- **Change photo:** replace `assets/photo.jpg` (roughly square works best).
+- **Offer a PDF CV:** put the file at `assets/cv.pdf` and un-comment the
+  "Download CV" link near the top of `cv.html`.
+- **Colors / fonts:** the `:root` variables at the top of `css/style.css`.
+- The sidebar is repeated in each of the four HTML files — if you change it
+  (e.g. a new email), change it in all four.
 
-- Google Scholar
-- ORCID
-- arXiv
-- GitHub
-- University profile
-- Email address
+## Preview locally
+
+Any static server works, e.g.:
+
+```sh
+python3 -m http.server 4173
+# then open http://localhost:4173
+```
+
+## Publish to GitHub Pages
+
+The site must live in a repository named `sabitbekbolys.github.io` on the
+`sabitbekbolys` account (its GitHub Pages then serves at that URL). From this
+folder:
+
+```sh
+git init                # if not already a repo
+git add -A
+git commit -m "Rebuild academic portfolio"
+git branch -M main
+git remote add origin https://github.com/sabitbekbolys/sabitbekbolys.github.io.git
+git push -u origin main --force   # --force replaces the old template site
+```
+
+Then check that **Settings → Pages** in the repo has "Deploy from a branch"
+with `main` / root selected. The site updates a minute or two after each push.

@@ -1,204 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bolys Sabitbek | Mathematician</title>
-    <meta
-      name="description"
-      content="Academic portfolio website for a mathematician, including research interests, publications, teaching, and contact information."
-    >
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#home">Bolys Sabitbek</a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bolys Sabitbek — Mathematician</title>
+  <meta name="description" content="Bolys Sabitbek is a postdoctoral researcher at the Ghent Analysis &amp; PDE Center, Ghent University, working on hyperbolic PDEs with multiplicities, singular coefficients, and functional inequalities on stratified Lie groups.">
+  <link rel="canonical" href="https://sabitbekbolys.github.io/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:title" content="Bolys Sabitbek — Mathematician">
+  <meta property="og:description" content="Postdoctoral researcher at the Ghent Analysis &amp; PDE Center, Ghent University. Analysis of partial differential equations.">
+  <meta property="og:image" content="https://sabitbekbolys.github.io/assets/photo.jpg">
+  <meta property="og:url" content="https://sabitbekbolys.github.io/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bolys Sabitbek",
+    "jobTitle": "Postdoctoral Researcher",
+    "affiliation": { "@type": "Organization", "name": "Ghent University" },
+    "url": "https://sabitbekbolys.github.io/",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=mEzFxvAAAAAJ",
+      "https://orcid.org/0000-0002-4580-8084",
+      "https://arxiv.org/a/sabitbek_b_1.html",
+      "https://www.researchgate.net/profile/Bolys-Sabitbek"
+    ]
+  }
+  </script>
+</head>
+<body>
+<div class="layout">
+
+  <!-- ======================= Sidebar (same on every page) ======================= -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <img class="portrait" src="assets/photo.jpg" alt="Portrait of Bolys Sabitbek" width="168" height="168">
+      <div class="identity">
+        <h1><a href="index.html">Bolys Sabitbek</a></h1>
+        <p class="role">Postdoctoral Researcher<br>
+          <a href="https://analysis-pde.org/">Ghent Analysis &amp; PDE Center</a><br>
+          Ghent University, Belgium</p>
+      </div>
+      <nav class="site-nav" aria-label="Site navigation">
+        <ul>
+          <li><a href="index.html" aria-current="page">About</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="cv.html">CV</a></li>
+        </ul>
       </nav>
-    </header>
+      <ul class="profiles" aria-label="Academic profiles">
+        <li><a href="https://scholar.google.com/citations?user=mEzFxvAAAAAJ">Google Scholar</a></li>
+        <li><a href="https://arxiv.org/a/sabitbek_b_1.html">arXiv</a></li>
+        <li><a href="https://orcid.org/0000-0002-4580-8084">ORCID</a></li>
+        <li><a href="https://www.researchgate.net/profile/Bolys-Sabitbek">ResearchGate</a></li>
+        <li><a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1239340">MathSciNet</a></li>
+        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57190934859">Scopus</a></li>
+        <li><a href="https://github.com/sabitbekbolys">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/bolys-sabitbek-09938878/">LinkedIn</a></li>
+      </ul>
+      <p class="email">sabitbek.bolys [at] ugent.be</p>
+    </div>
+  </aside>
 
-    <main>
-      <section class="hero" id="home" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/math-hero.png" alt="Abstract mathematical research visual">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Mathematician and Academic Researcher</p>
-          <h1 id="hero-title">Bolys Sabitbek</h1>
-          <p class="hero-copy">
-            I study problems in your research area, with interests in topic one,
-            topic two, and topic three. My work connects rigorous theory with
-            clear examples, computation, and mathematical communication.
-          </p>
-          <div class="hero-actions" aria-label="Academic links">
-            <a class="button primary" href="#publications">Publications</a>
-            <a class="button secondary" href="#contact">Contact</a>
-          </div>
-        </div>
-      </section>
+  <!-- ================================ Content ================================= -->
+  <main class="content">
 
-      <section class="intro section">
-        <div class="section-inner intro-grid">
-          <div>
-            <p class="section-kicker">Current Position</p>
-            <h2>Researcher in Mathematics</h2>
-            <p>
-              Replace this paragraph with a short biography: your university or
-              institute, current role, supervisor or group if relevant, and the
-              main questions that motivate your research.
-            </p>
-          </div>
-          <dl class="quick-facts" aria-label="Profile summary">
-            <div>
-              <dt>Affiliation</dt>
-              <dd>Your University or Institute</dd>
-            </div>
-            <div>
-              <dt>Fields</dt>
-              <dd>Algebra, Analysis, Geometry</dd>
-            </div>
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:your.email@example.com">your.email@example.com</a></dd>
-            </div>
-          </dl>
-        </div>
-      </section>
+    <div class="lede">
+      <p>I am a mathematician working in the analysis of partial differential
+      equations, currently a postdoctoral researcher at the
+      <a href="https://analysis-pde.org/">Ghent Analysis &amp; PDE Center</a>,
+      Ghent University.</p>
 
-      <section class="section" id="research" aria-labelledby="research-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">Research</p>
-            <h2 id="research-title">Research Interests</h2>
-          </div>
-          <div class="research-list">
-            <article class="research-item">
-              <span class="item-number">01</span>
-              <div>
-                <h3>Research Theme One</h3>
-                <p>
-                  Describe a main area of your research. Mention the objects,
-                  methods, or questions you study.
-                </p>
-              </div>
-            </article>
-            <article class="research-item">
-              <span class="item-number">02</span>
-              <div>
-                <h3>Research Theme Two</h3>
-                <p>
-                  Add a second theme, such as differential equations, number
-                  theory, mathematical physics, topology, or probability.
-                </p>
-              </div>
-            </article>
-            <article class="research-item">
-              <span class="item-number">03</span>
-              <div>
-                <h3>Computation and Examples</h3>
-                <p>
-                  If you use code, SageMath, Python, Lean, Julia, or notebooks,
-                  describe how computation supports your mathematical work.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      <p>Previously I was a postdoctoral research assistant at the School of
+      Mathematical Sciences, Queen Mary University of London, supported by the
+      EPSRC grant EP/V005529/1, where I worked with Claudia Garetto and
+      Michael Ruzhansky. I received my PhD in Mathematics in 2019 from
+      Al-Farabi Kazakh National University and the Institute of Mathematics
+      and Mathematical Modeling in Almaty, under the supervision of
+      Tynysbek Kalmenov and Michael Ruzhansky. Before turning to analysis,
+      I completed an MSc in Aerospace Engineering at the Georgia Institute
+      of Technology.</p>
+    </div>
 
-      <section class="section tinted" id="publications" aria-labelledby="publications-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">Selected Work</p>
-            <h2 id="publications-title">Publications and Preprints</h2>
-          </div>
-          <div class="publication-list">
-            <article class="publication-card">
-              <p class="publication-year">2026</p>
-              <h3>Title of Your Paper</h3>
-              <p class="authors">Your Name, Coauthor Name</p>
-              <p class="venue">Journal, Conference, or arXiv preprint</p>
-              <div class="inline-links">
-                <a href="#">PDF</a>
-                <a href="#">arXiv</a>
-                <a href="#">Code</a>
-              </div>
-            </article>
-            <article class="publication-card">
-              <p class="publication-year">2025</p>
-              <h3>Another Research Article</h3>
-              <p class="authors">Your Name</p>
-              <p class="venue">Submitted or in preparation</p>
-              <div class="inline-links">
-                <a href="#">PDF</a>
-                <a href="#">DOI</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+    <h2 id="research">Research interests</h2>
+    <ul class="interests">
+      <li>Hyperbolic equations and systems with multiplicities</li>
+      <li>PDEs with singular and rough coefficients</li>
+      <li>Functional inequalities on stratified Lie groups</li>
+      <li>Global existence and nonexistence of solutions to PDEs</li>
+    </ul>
 
-      <section class="section" id="teaching" aria-labelledby="teaching-title">
-        <div class="section-inner split">
-          <div class="section-heading">
-            <p class="section-kicker">Teaching</p>
-            <h2 id="teaching-title">Teaching and Mentoring</h2>
-          </div>
-          <div class="timeline">
-            <article>
-              <time datetime="2026">2026</time>
-              <h3>Course Title</h3>
-              <p>Short description of the course, your role, and materials.</p>
-            </article>
-            <article>
-              <time datetime="2025">2025</time>
-              <h3>Seminar or Tutorial</h3>
-              <p>Describe seminars, reading groups, supervision, or outreach.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+    <h2 id="news">News</h2>
+    <ul class="news">
+      <li>
+        <span class="when">2026</span>
+        <span>“Potential wells and thresholds for a strongly damped
+        <em>p</em>-Laplacian wave equation” published in
+        <em>Discrete and Continuous Dynamical Systems&nbsp;–&nbsp;S</em>.</span>
+      </li>
+      <li>
+        <span class="when">2025</span>
+        <span>New preprint with Arick Shao, “Asymptotics and scattering for
+        critically weakly hyperbolic and singular systems”
+        (<a href="https://arxiv.org/abs/2506.11348">arXiv:2506.11348</a>).</span>
+      </li>
+      <li>
+        <span class="when">2025</span>
+        <span>“<em>C</em><sup>∞</sup> well-posedness of higher order hyperbolic
+        pseudo-differential equations with multiplicities,” with Claudia
+        Garetto, published in <em>Acta Applicandae Mathematicae</em>.</span>
+      </li>
+      <li>
+        <span class="when">2025</span>
+        <span>“Hardy and Rellich inequalities with Bessel pairs,” with Michael
+        Ruzhansky, published in the
+        <em>Proceedings of the Edinburgh Mathematical Society</em>.</span>
+      </li>
+      <li>
+        <span class="when">2024</span>
+        <span>“Hyperbolic systems with non-diagonalisable principal part and
+        variable multiplicities, III,” with Claudia Garetto, published in
+        <em>Mathematische Annalen</em>.</span>
+      </li>
+    </ul>
 
-      <section class="section compact" id="cv" aria-labelledby="cv-title">
-        <div class="section-inner callout">
-          <div>
-            <p class="section-kicker">Curriculum Vitae</p>
-            <h2 id="cv-title">Academic CV</h2>
-            <p>
-              Add your CV as <code>cv.pdf</code> in this folder and update the
-              button link below.
-            </p>
-          </div>
-          <a class="button primary" href="cv.pdf">Download CV</a>
-        </div>
-      </section>
-
-      <section class="section contact" id="contact" aria-labelledby="contact-title">
-        <div class="section-inner contact-grid">
-          <div>
-            <p class="section-kicker">Contact</p>
-            <h2 id="contact-title">Get in Touch</h2>
-            <p>
-              I am happy to hear about research questions, seminar invitations,
-              collaborations, and academic opportunities.
-            </p>
-          </div>
-          <ul class="contact-list">
-            <li><a href="mailto:your.email@example.com">your.email@example.com</a></li>
-            <li><a href="#">Google Scholar</a></li>
-            <li><a href="#">ORCID</a></li>
-            <li><a href="#">GitHub</a></li>
-          </ul>
-        </div>
-      </section>
-    </main>
+    <h2 id="selected">Selected publications</h2>
+    <ol class="pubs compact">
+      <li>
+        <div class="pub-authors"><strong>B. Sabitbek</strong>, A. Shao</div>
+        <div class="pub-title">Asymptotics and scattering for critically weakly hyperbolic and singular systems</div>
+        <div class="pub-venue">Preprint (2025)</div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2506.11348">arXiv:2506.11348</a></div>
+      </li>
+      <li>
+        <div class="pub-authors">C. Garetto, <strong>B. Sabitbek</strong></div>
+        <div class="pub-title"><em>C</em><sup>∞</sup> well-posedness of higher order hyperbolic pseudo-differential equations with multiplicities</div>
+        <div class="pub-venue"><em>Acta Applicandae Mathematicae</em>, 196, 4 (2025)</div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2405.04927">arXiv:2405.04927</a></div>
+      </li>
+      <li>
+        <div class="pub-authors">C. Garetto, <strong>B. Sabitbek</strong></div>
+        <div class="pub-title">Hyperbolic systems with non-diagonalisable principal part and variable multiplicities, III: singular coefficients</div>
+        <div class="pub-venue"><em>Mathematische Annalen</em> (2024)</div>
+        <div class="pub-links"><a href="https://doi.org/10.1007/s00208-023-02792-7">DOI</a></div>
+      </li>
+      <li>
+        <div class="pub-authors">M. Ruzhansky, <strong>B. Sabitbek</strong></div>
+        <div class="pub-title">Hardy and Rellich inequalities with Bessel pairs</div>
+        <div class="pub-venue"><em>Proceedings of the Edinburgh Mathematical Society</em> (2025)</div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2101.07008">arXiv:2101.07008</a></div>
+      </li>
+      <li>
+        <div class="pub-authors">M. Ruzhansky, <strong>B. Sabitbek</strong>, B. Torebek</div>
+        <div class="pub-title">Global existence and blow-up of solutions to porous medium equation and pseudo-parabolic equation, I. Stratified groups</div>
+        <div class="pub-venue"><em>Manuscripta Mathematica</em> (2022)</div>
+        <div class="pub-links"><a href="https://arxiv.org/abs/2106.00406">arXiv:2106.00406</a></div>
+      </li>
+    </ol>
+    <p><a href="publications.html">View all publications →</a></p>
 
     <footer class="site-footer">
-      <p>&copy; 2026 Your Name. Built with GitHub Pages.</p>
+      <p>© 2026 Bolys Sabitbek · Ghent Analysis &amp; PDE Center, Department of
+      Mathematics: Analysis, Logic and Discrete Mathematics, Ghent University ·
+      <a href="https://github.com/sabitbekbolys/sabitbekbolys.github.io">Source on GitHub</a></p>
     </footer>
-  </body>
+
+  </main>
+</div>
+</body>
 </html>
