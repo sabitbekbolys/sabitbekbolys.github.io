@@ -7,6 +7,9 @@
   <meta name="description" content="Bolys Sabitbek is a postdoctoral researcher at the Ghent Analysis &amp; PDE Center, Ghent University, working on hyperbolic PDEs with multiplicities, singular coefficients, and functional inequalities on stratified Lie groups.">
   <link rel="canonical" href="https://sabitbekbolys.github.io/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
   <link rel="stylesheet" href="css/style.css">
   <meta property="og:title" content="Bolys Sabitbek — Mathematician">
   <meta property="og:description" content="Postdoctoral researcher at the Ghent Analysis &amp; PDE Center, Ghent University. Analysis of partial differential equations.">
@@ -30,145 +33,253 @@
   </script>
 </head>
 <body>
-<div class="layout">
 
-  <!-- ======================= Sidebar (same on every page) ======================= -->
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-      <img class="portrait" src="assets/photo.jpg" alt="Portrait of Bolys Sabitbek" width="168" height="168">
-      <div class="identity">
-        <h1><a href="index.html">Bolys Sabitbek</a></h1>
-        <p class="role">Postdoctoral Researcher<br>
-          <a href="https://analysis-pde.org/">Ghent Analysis &amp; PDE Center</a><br>
-          Ghent University, Belgium</p>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">&#8706;</span>Bolys Sabitbek</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Site navigation">
+      <a href="index.html" aria-current="page">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================= Hero ============================= -->
+<section class="hero" aria-label="Introduction">
+  <canvas id="wave" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <p class="eyebrow">Ghent Analysis &amp; PDE Center · Ghent University</p>
+    <h1>Bolys Sabitbek</h1>
+    <p class="tagline">Mathematician working in the analysis of partial
+    differential equations — hyperbolic systems with multiplicities, singular
+    coefficients, and functional inequalities on stratified Lie groups.</p>
+    <p class="equation-note">
+      <span class="eq">u<sub>tt</sub> = c<sup>2</sup>&Delta;u</span>
+      <span>the surface behind this text is solving the wave equation live &mdash; move your cursor across it</span>
+    </p>
+  </div>
+  <span class="scroll-cue">Scroll</span>
+</section>
+
+<main>
+
+  <!-- ============================= About ============================= -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="no">01</span>
+        <h2>About</h2>
       </div>
-      <nav class="site-nav" aria-label="Site navigation">
-        <ul>
-          <li><a href="index.html" aria-current="page">About</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="outreach.html">Outreach</a></li>
-          <li><a href="cv.html">CV</a></li>
-        </ul>
-      </nav>
-      <ul class="profiles" aria-label="Academic profiles">
-        <li><a href="https://scholar.google.com/citations?user=mEzFxvAAAAAJ">Google Scholar</a></li>
-        <li><a href="https://arxiv.org/a/sabitbek_b_1.html">arXiv</a></li>
-        <li><a href="https://orcid.org/0000-0002-4580-8084">ORCID</a></li>
-        <li><a href="https://www.researchgate.net/profile/Bolys-Sabitbek">ResearchGate</a></li>
-        <li><a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1239340">MathSciNet</a></li>
-        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57190934859">Scopus</a></li>
-        <li><a href="https://github.com/sabitbekbolys">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/bolys-sabitbek-09938878/">LinkedIn</a></li>
+      <div class="about-grid">
+        <div class="bio reveal">
+          <p>I am a mathematician working in the analysis of partial differential
+          equations, currently a postdoctoral researcher at the
+          <a href="https://analysis-pde.org/">Ghent Analysis &amp; PDE Center</a>,
+          Ghent University, Belgium.</p>
+
+          <p>Previously I was a postdoctoral research assistant at the School of
+          Mathematical Sciences, <strong>Queen Mary University of London</strong>,
+          supported by the EPSRC grant EP/V005529/1, where I worked with
+          Claudia Garetto and Michael Ruzhansky. I received my PhD in
+          Mathematics in 2019 from Al-Farabi Kazakh National University and the
+          Institute of Mathematics and Mathematical Modeling in Almaty, under
+          the supervision of Tynysbek Kalmenov and Michael Ruzhansky.</p>
+
+          <p>Before turning to analysis, I completed an MSc in Aerospace
+          Engineering at the <strong>Georgia Institute of Technology</strong>.</p>
+        </div>
+        <figure class="portrait-figure reveal">
+          <img src="assets/photo.jpg" alt="Portrait of Bolys Sabitbek" width="336" height="336">
+          <figcaption>Ghent, Belgium · sabitbek.bolys [at] ugent.be</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= Research ============================= -->
+  <section class="section" id="research">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="no">02</span>
+        <h2>Research</h2>
+      </div>
+      <div class="interest-grid reveal">
+        <div class="interest">
+          <span class="glyph">&#9633;</span>
+          <h3>Hyperbolic equations with multiplicities</h3>
+          <p>Well-posedness of equations and systems whose characteristics
+          collide — where classical hyperbolic theory breaks down.</p>
+        </div>
+        <div class="interest">
+          <span class="glyph">&#8706;</span>
+          <h3>Singular &amp; rough coefficients</h3>
+          <p>PDEs whose coefficients blow up or lose regularity in time, and
+          the asymptotics and scattering of their solutions.</p>
+        </div>
+        <div class="interest">
+          <span class="glyph">&#8711;</span>
+          <h3>Functional inequalities on Lie groups</h3>
+          <p>Hardy, Rellich and Sobolev-type inequalities in the
+          sub-Riemannian geometry of stratified Lie groups.</p>
+        </div>
+        <div class="interest">
+          <span class="glyph">&lambda;</span>
+          <h3>Global existence &amp; blow-up</h3>
+          <p>When do solutions of nonlinear evolution equations live forever,
+          and when do they explode in finite time?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ News ============================== -->
+  <section class="section" id="news">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="no">03</span>
+        <h2>News</h2>
+      </div>
+      <ul class="news reveal">
+
+        <!-- ───────────────────────────────────────────────────────────
+             ✏️  ADD NEWS HERE
+             Copy the template below, paste it right after this comment
+             (newest first). Keep the list to ~5 items — delete the
+             oldest <li> at the bottom when it gets long.
+
+             <li>
+               <span class="when">2026</span>
+               <span class="what">One or two sentences. Journal names in
+               <em> … </em>, links as
+               <a href="https://arxiv.org/abs/XXXX.XXXXX">arXiv:XXXX.XXXXX</a>.</span>
+             </li>
+             ─────────────────────────────────────────────────────────── -->
+        <li>
+          <span class="when">2026</span>
+          <span class="what">&ldquo;Potential wells and thresholds for a strongly damped
+          <em>p</em>-Laplacian wave equation&rdquo; published in
+          <em>Discrete and Continuous Dynamical Systems&nbsp;&ndash;&nbsp;S</em>.</span>
+        </li>
+        <li>
+          <span class="when">2025</span>
+          <span class="what">New preprint with Arick Shao, &ldquo;Asymptotics and scattering for
+          critically weakly hyperbolic and singular systems&rdquo;
+          (<a href="https://arxiv.org/abs/2506.11348">arXiv:2506.11348</a>).</span>
+        </li>
+        <li>
+          <span class="when">2025</span>
+          <span class="what">&ldquo;<em>C</em><sup>&infin;</sup> well-posedness of higher order hyperbolic
+          pseudo-differential equations with multiplicities,&rdquo; with Claudia
+          Garetto, published in <em>Acta Applicandae Mathematicae</em>.</span>
+        </li>
+        <li>
+          <span class="when">2025</span>
+          <span class="what">&ldquo;Hardy and Rellich inequalities with Bessel pairs,&rdquo; with Michael
+          Ruzhansky, published in the
+          <em>Proceedings of the Edinburgh Mathematical Society</em>.</span>
+        </li>
+        <li>
+          <span class="when">2024</span>
+          <span class="what">&ldquo;Hyperbolic systems with non-diagonalisable principal part and
+          variable multiplicities, III,&rdquo; with Claudia Garetto, published in
+          <em>Mathematische Annalen</em>.</span>
+        </li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ==================== Selected publications ===================== -->
+  <section class="section" id="selected">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="no">04</span>
+        <h2>Selected publications</h2>
+      </div>
+      <ol class="pubs reveal">
+
+        <!-- ───────────────────────────────────────────────────────────
+             ✏️  UPDATE SELECTED PUBLICATIONS HERE
+             This is a hand-picked shortlist (~5 papers). To feature a
+             new paper: copy its whole <li> … </li> block from
+             publications.html, paste it here at the top, and delete
+             one from the bottom so the list stays short.
+             ─────────────────────────────────────────────────────────── -->
+        <li>
+          <div>
+            <div class="pub-title">Asymptotics and scattering for critically weakly hyperbolic and singular systems</div>
+            <div class="pub-authors"><strong>B. Sabitbek</strong>, A. Shao</div>
+            <div class="pub-venue">Preprint (2025)</div>
+            <div class="pub-links"><a href="https://arxiv.org/abs/2506.11348">arXiv:2506.11348</a></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="pub-title"><em>C</em><sup>&infin;</sup> well-posedness of higher order hyperbolic pseudo-differential equations with multiplicities</div>
+            <div class="pub-authors">C. Garetto, <strong>B. Sabitbek</strong></div>
+            <div class="pub-venue"><em>Acta Applicandae Mathematicae</em>, 196, 4 (2025)</div>
+            <div class="pub-links"><a href="https://arxiv.org/abs/2405.04927">arXiv:2405.04927</a></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="pub-title">Hyperbolic systems with non-diagonalisable principal part and variable multiplicities, III: singular coefficients</div>
+            <div class="pub-authors">C. Garetto, <strong>B. Sabitbek</strong></div>
+            <div class="pub-venue"><em>Mathematische Annalen</em> (2024)</div>
+            <div class="pub-links"><a href="https://doi.org/10.1007/s00208-023-02792-7">DOI</a></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="pub-title">Hardy and Rellich inequalities with Bessel pairs</div>
+            <div class="pub-authors">M. Ruzhansky, <strong>B. Sabitbek</strong></div>
+            <div class="pub-venue"><em>Proceedings of the Edinburgh Mathematical Society</em> (2025)</div>
+            <div class="pub-links"><a href="https://arxiv.org/abs/2101.07008">arXiv:2101.07008</a></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="pub-title">Global existence and blow-up of solutions to porous medium equation and pseudo-parabolic equation, I. Stratified groups</div>
+            <div class="pub-authors">M. Ruzhansky, <strong>B. Sabitbek</strong>, B. Torebek</div>
+            <div class="pub-venue"><em>Manuscripta Mathematica</em> (2022)</div>
+            <div class="pub-links"><a href="https://arxiv.org/abs/2106.00406">arXiv:2106.00406</a></div>
+          </div>
+        </li>
+      </ol>
+      <p class="more-link reveal"><a href="publications.html">All publications</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ Footer ============================= -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-eq">&#9633;u = 0</p>
+      <p>&copy; 2026 Bolys Sabitbek &middot; Ghent Analysis &amp; PDE Center,
+      Department of Mathematics: Analysis, Logic and Discrete Mathematics,
+      Ghent University</p>
       <p class="email">sabitbek.bolys [at] ugent.be</p>
+      <p><a href="https://github.com/sabitbekbolys/sabitbekbolys.github.io">Source on GitHub</a></p>
     </div>
-  </aside>
-
-  <!-- ================================ Content ================================= -->
-  <main class="content">
-
-    <div class="lede">
-      <p>I am a mathematician working in the analysis of partial differential
-      equations, currently a postdoctoral researcher at the
-      <a href="https://analysis-pde.org/">Ghent Analysis &amp; PDE Center</a>,
-      Ghent University.</p>
-
-      <p>Previously I was a postdoctoral research assistant at the School of
-      Mathematical Sciences, Queen Mary University of London, supported by the
-      EPSRC grant EP/V005529/1, where I worked with Claudia Garetto and
-      Michael Ruzhansky. I received my PhD in Mathematics in 2019 from
-      Al-Farabi Kazakh National University and the Institute of Mathematics
-      and Mathematical Modeling in Almaty, under the supervision of
-      Tynysbek Kalmenov and Michael Ruzhansky. Before turning to analysis,
-      I completed an MSc in Aerospace Engineering at the Georgia Institute
-      of Technology.</p>
-    </div>
-
-    <h2 id="research">Research interests</h2>
-    <ul class="interests">
-      <li>Hyperbolic equations and systems with multiplicities</li>
-      <li>PDEs with singular and rough coefficients</li>
-      <li>Functional inequalities on stratified Lie groups</li>
-      <li>Global existence and nonexistence of solutions to PDEs</li>
+    <ul class="footer-links" aria-label="Academic profiles">
+      <li><a href="https://scholar.google.com/citations?user=mEzFxvAAAAAJ">Google Scholar</a></li>
+      <li><a href="https://arxiv.org/a/sabitbek_b_1.html">arXiv</a></li>
+      <li><a href="https://orcid.org/0000-0002-4580-8084">ORCID</a></li>
+      <li><a href="https://www.researchgate.net/profile/Bolys-Sabitbek">ResearchGate</a></li>
+      <li><a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1239340">MathSciNet</a></li>
+      <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57190934859">Scopus</a></li>
+      <li><a href="https://github.com/sabitbekbolys">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/bolys-sabitbek-09938878/">LinkedIn</a></li>
     </ul>
+  </div>
+</footer>
 
-    <h2 id="news">News</h2>
-    <ul class="news">
-      <li>
-        <span class="when">2026</span>
-        <span>“Potential wells and thresholds for a strongly damped
-        <em>p</em>-Laplacian wave equation” published in
-        <em>Discrete and Continuous Dynamical Systems&nbsp;–&nbsp;S</em>.</span>
-      </li>
-      <li>
-        <span class="when">2025</span>
-        <span>New preprint with Arick Shao, “Asymptotics and scattering for
-        critically weakly hyperbolic and singular systems”
-        (<a href="https://arxiv.org/abs/2506.11348">arXiv:2506.11348</a>).</span>
-      </li>
-      <li>
-        <span class="when">2025</span>
-        <span>“<em>C</em><sup>∞</sup> well-posedness of higher order hyperbolic
-        pseudo-differential equations with multiplicities,” with Claudia
-        Garetto, published in <em>Acta Applicandae Mathematicae</em>.</span>
-      </li>
-      <li>
-        <span class="when">2025</span>
-        <span>“Hardy and Rellich inequalities with Bessel pairs,” with Michael
-        Ruzhansky, published in the
-        <em>Proceedings of the Edinburgh Mathematical Society</em>.</span>
-      </li>
-      <li>
-        <span class="when">2024</span>
-        <span>“Hyperbolic systems with non-diagonalisable principal part and
-        variable multiplicities, III,” with Claudia Garetto, published in
-        <em>Mathematische Annalen</em>.</span>
-      </li>
-    </ul>
-
-    <h2 id="selected">Selected publications</h2>
-    <ol class="pubs compact">
-      <li>
-        <div class="pub-authors"><strong>B. Sabitbek</strong>, A. Shao</div>
-        <div class="pub-title">Asymptotics and scattering for critically weakly hyperbolic and singular systems</div>
-        <div class="pub-venue">Preprint (2025)</div>
-        <div class="pub-links"><a href="https://arxiv.org/abs/2506.11348">arXiv:2506.11348</a></div>
-      </li>
-      <li>
-        <div class="pub-authors">C. Garetto, <strong>B. Sabitbek</strong></div>
-        <div class="pub-title"><em>C</em><sup>∞</sup> well-posedness of higher order hyperbolic pseudo-differential equations with multiplicities</div>
-        <div class="pub-venue"><em>Acta Applicandae Mathematicae</em>, 196, 4 (2025)</div>
-        <div class="pub-links"><a href="https://arxiv.org/abs/2405.04927">arXiv:2405.04927</a></div>
-      </li>
-      <li>
-        <div class="pub-authors">C. Garetto, <strong>B. Sabitbek</strong></div>
-        <div class="pub-title">Hyperbolic systems with non-diagonalisable principal part and variable multiplicities, III: singular coefficients</div>
-        <div class="pub-venue"><em>Mathematische Annalen</em> (2024)</div>
-        <div class="pub-links"><a href="https://doi.org/10.1007/s00208-023-02792-7">DOI</a></div>
-      </li>
-      <li>
-        <div class="pub-authors">M. Ruzhansky, <strong>B. Sabitbek</strong></div>
-        <div class="pub-title">Hardy and Rellich inequalities with Bessel pairs</div>
-        <div class="pub-venue"><em>Proceedings of the Edinburgh Mathematical Society</em> (2025)</div>
-        <div class="pub-links"><a href="https://arxiv.org/abs/2101.07008">arXiv:2101.07008</a></div>
-      </li>
-      <li>
-        <div class="pub-authors">M. Ruzhansky, <strong>B. Sabitbek</strong>, B. Torebek</div>
-        <div class="pub-title">Global existence and blow-up of solutions to porous medium equation and pseudo-parabolic equation, I. Stratified groups</div>
-        <div class="pub-venue"><em>Manuscripta Mathematica</em> (2022)</div>
-        <div class="pub-links"><a href="https://arxiv.org/abs/2106.00406">arXiv:2106.00406</a></div>
-      </li>
-    </ol>
-    <p><a href="publications.html">View all publications →</a></p>
-
-    <footer class="site-footer">
-      <p>© 2026 Bolys Sabitbek · Ghent Analysis &amp; PDE Center, Department of
-      Mathematics: Analysis, Logic and Discrete Mathematics, Ghent University ·
-      <a href="https://github.com/sabitbekbolys/sabitbekbolys.github.io">Source on GitHub</a></p>
-    </footer>
-
-  </main>
-</div>
+<script src="js/wave.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>

@@ -7,136 +7,168 @@
   <meta name="description" content="Curriculum vitae of Bolys Sabitbek: positions at Ghent University and Queen Mary University of London; PhD in Mathematics (2019); MSc in Aerospace Engineering, Georgia Tech.">
   <link rel="canonical" href="https://sabitbekbolys.github.io/cv.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="layout">
 
-  <!-- ======================= Sidebar (same on every page) ======================= -->
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-      <img class="portrait" src="assets/photo.jpg" alt="Portrait of Bolys Sabitbek" width="168" height="168">
-      <div class="identity">
-        <h1><a href="index.html">Bolys Sabitbek</a></h1>
-        <p class="role">Postdoctoral Researcher<br>
-          <a href="https://analysis-pde.org/">Ghent Analysis &amp; PDE Center</a><br>
-          Ghent University, Belgium</p>
-      </div>
-      <nav class="site-nav" aria-label="Site navigation">
-        <ul>
-          <li><a href="index.html">About</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="outreach.html">Outreach</a></li>
-          <li><a href="cv.html" aria-current="page">CV</a></li>
-        </ul>
-      </nav>
-      <ul class="profiles" aria-label="Academic profiles">
-        <li><a href="https://scholar.google.com/citations?user=mEzFxvAAAAAJ">Google Scholar</a></li>
-        <li><a href="https://arxiv.org/a/sabitbek_b_1.html">arXiv</a></li>
-        <li><a href="https://orcid.org/0000-0002-4580-8084">ORCID</a></li>
-        <li><a href="https://www.researchgate.net/profile/Bolys-Sabitbek">ResearchGate</a></li>
-        <li><a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1239340">MathSciNet</a></li>
-        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57190934859">Scopus</a></li>
-        <li><a href="https://github.com/sabitbekbolys">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/bolys-sabitbek-09938878/">LinkedIn</a></li>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">&#8706;</span>Bolys Sabitbek</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Site navigation">
+      <a href="index.html">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="cv.html" aria-current="page">CV</a>
+    </nav>
+  </div>
+</header>
+
+<section class="banner" aria-label="Page header">
+  <canvas id="wave" data-variant="banner" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <p class="eyebrow">Curriculum vitae</p>
+    <h1>CV</h1>
+  </div>
+</section>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+
+      <!-- To offer a downloadable PDF: put your CV at assets/cv.pdf and
+           remove the comment markers around the link below. -->
+      <!--
+      <p class="more-link"><a href="assets/cv.pdf">Download CV (PDF)</a></p>
+      -->
+
+      <p class="sub-label" id="positions">Positions</p>
+      <ul class="timeline">
+
+        <!-- ───────────────────────────────────────────────────────────
+             ✏️  ADD NEW POSITION HERE
+             Copy the template below, paste it right after this comment
+             (newest first). The same template works for the Education
+             and Awards lists further down; the extra <p> … </p> line
+             is optional — delete it if not needed.
+
+             <li>
+               <span class="when">2026 &ndash;</span>
+               <div class="what">
+                 <strong>Job Title</strong>
+                 <span class="where">Institute, University, Country</span>
+                 <p>Optional extra detail: grant, collaborators, topic.</p>
+               </div>
+             </li>
+             ─────────────────────────────────────────────────────────── -->
+        <li>
+          <span class="when">Present</span>
+          <div class="what">
+            <strong>Postdoctoral Researcher</strong>
+            <span class="where">Ghent Analysis &amp; PDE Center, Ghent University, Belgium</span>
+          </div>
+        </li>
+        <li>
+          <!-- Add exact years when convenient -->
+          <span class="when"></span>
+          <div class="what">
+            <strong>Postdoctoral Research Assistant</strong>
+            <span class="where">School of Mathematical Sciences, Queen Mary University of London, UK</span>
+            <p>EPSRC-funded position (grant EP/V005529/1), working with
+            Claudia Garetto and Michael Ruzhansky on hyperbolic equations
+            with multiplicities and singular coefficients.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2010 &ndash;</span>
+          <div class="what">
+            <strong>Researcher</strong>
+            <span class="where">Department of Differential Equations, Institute of
+            Mathematics and Mathematical Modeling, Almaty, Kazakhstan</span>
+          </div>
+        </li>
       </ul>
-      <p class="email">sabitbek.bolys [at] ugent.be</p>
+
+      <p class="sub-label" id="education">Education</p>
+      <ul class="timeline">
+        <li>
+          <span class="when">2016 &ndash; 2019</span>
+          <div class="what">
+            <strong>PhD in Mathematics</strong>
+            <span class="where">Al-Farabi Kazakh National University and the Institute
+            of Mathematics and Mathematical Modeling, Almaty, Kazakhstan</span>
+            <p>Defended June 2019. Advisors: Tynysbek Kalmenov and Michael Ruzhansky.</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2014 &ndash; 2016</span>
+          <div class="what">
+            <strong>MSc in Aerospace Engineering</strong>
+            <span class="where">Georgia Institute of Technology, Atlanta, USA</span>
+          </div>
+        </li>
+        <li>
+          <span class="when">2008 &ndash; 2012</span>
+          <div class="what">
+            <strong>BSc in Mechanics</strong>
+            <span class="where">Al-Farabi Kazakh National University, Almaty, Kazakhstan</span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="sub-label" id="awards">Awards &amp; recognition</p>
+      <ul class="timeline">
+
+        <!-- ───────────────────────────────────────────────────────────
+             ✏️  ADD NEW AWARD HERE — copy the template from the
+             "ADD NEW POSITION" comment near the top of this page.
+             ─────────────────────────────────────────────────────────── -->
+        <li>
+          <span class="when">2018</span>
+          <div class="what">
+            <strong>Travel grant</strong>
+            <span class="where">6th Heidelberg Laureate Forum, Heidelberg, Germany</span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="sub-label" id="links">More</p>
+      <ul class="plain-list">
+        <li><a href="https://www.mathgenealogy.org/id.php?id=249536">Mathematics Genealogy Project</a></li>
+        <li><a href="publications.html">Full list of publications</a></li>
+        <li><a href="teaching.html">Teaching and mentoring</a></li>
+      </ul>
+
     </div>
-  </aside>
+  </section>
+</main>
 
-  <!-- ================================ Content ================================= -->
-  <main class="content">
-
-    <h2 class="page-title">Curriculum vitae</h2>
-
-    <!-- To offer a downloadable PDF: put your CV at assets/cv.pdf and
-         remove the comment markers around the link below. -->
-    <!--
-    <a class="cv-download" href="assets/cv.pdf">Download CV (PDF)</a>
-    -->
-
-    <h2 id="positions">Positions</h2>
-    <ul class="timeline">
-      <li>
-        <span class="when">Present</span>
-        <div class="what">
-          <strong>Postdoctoral Researcher</strong>
-          <span class="where">— Ghent Analysis &amp; PDE Center, Ghent University, Belgium</span>
-        </div>
-      </li>
-      <li>
-        <!-- Add exact years when convenient -->
-        <span class="when"></span>
-        <div class="what">
-          <strong>Postdoctoral Research Assistant</strong>
-          <span class="where">— School of Mathematical Sciences, Queen Mary University of London, UK</span>
-          <p>EPSRC-funded position (grant EP/V005529/1), working with
-          Claudia Garetto and Michael Ruzhansky on hyperbolic equations
-          with multiplicities and singular coefficients.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2010 –</span>
-        <div class="what">
-          <strong>Researcher</strong>
-          <span class="where">— Department of Differential Equations, Institute of
-          Mathematics and Mathematical Modeling, Almaty, Kazakhstan</span>
-        </div>
-      </li>
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-eq">&#9633;u = 0</p>
+      <p>&copy; 2026 Bolys Sabitbek &middot; Ghent Analysis &amp; PDE Center, Ghent University</p>
+      <p class="email">sabitbek.bolys [at] ugent.be</p>
+      <p><a href="https://github.com/sabitbekbolys/sabitbekbolys.github.io">Source on GitHub</a></p>
+    </div>
+    <ul class="footer-links" aria-label="Academic profiles">
+      <li><a href="https://scholar.google.com/citations?user=mEzFxvAAAAAJ">Google Scholar</a></li>
+      <li><a href="https://arxiv.org/a/sabitbek_b_1.html">arXiv</a></li>
+      <li><a href="https://orcid.org/0000-0002-4580-8084">ORCID</a></li>
+      <li><a href="https://www.researchgate.net/profile/Bolys-Sabitbek">ResearchGate</a></li>
+      <li><a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1239340">MathSciNet</a></li>
+      <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57190934859">Scopus</a></li>
+      <li><a href="https://github.com/sabitbekbolys">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/bolys-sabitbek-09938878/">LinkedIn</a></li>
     </ul>
+  </div>
+</footer>
 
-    <h2 id="education">Education</h2>
-    <ul class="timeline">
-      <li>
-        <span class="when">2016 – 2019</span>
-        <div class="what">
-          <strong>PhD in Mathematics</strong>
-          <span class="where">— Al-Farabi Kazakh National University and the Institute
-          of Mathematics and Mathematical Modeling, Almaty, Kazakhstan</span>
-          <p>Defended June 2019. Advisors: Tynysbek Kalmenov and Michael Ruzhansky.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2014 – 2016</span>
-        <div class="what">
-          <strong>MSc in Aerospace Engineering</strong>
-          <span class="where">— Georgia Institute of Technology, Atlanta, USA</span>
-        </div>
-      </li>
-      <li>
-        <span class="when">2008 – 2012</span>
-        <div class="what">
-          <strong>BSc in Mechanics</strong>
-          <span class="where">— Al-Farabi Kazakh National University, Almaty, Kazakhstan</span>
-        </div>
-      </li>
-    </ul>
-
-    <h2 id="awards">Awards &amp; recognition</h2>
-    <ul class="timeline">
-      <li>
-        <span class="when">2018</span>
-        <div class="what">
-          <strong>Travel grant</strong>
-          <span class="where">— 6th Heidelberg Laureate Forum, Heidelberg, Germany</span>
-        </div>
-      </li>
-    </ul>
-
-    <h2 id="links">More</h2>
-    <ul class="interests">
-      <li><a href="https://www.mathgenealogy.org/id.php?id=249536">Mathematics Genealogy Project</a></li>
-      <li><a href="publications.html">Full list of publications</a></li>
-      <li><a href="teaching.html">Teaching and mentoring</a></li>
-    </ul>
-
-    <footer class="site-footer">
-      <p>© 2026 Bolys Sabitbek ·
-      <a href="https://github.com/sabitbekbolys/sabitbekbolys.github.io">Source on GitHub</a></p>
-    </footer>
-
-  </main>
-</div>
+<script src="js/wave.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>

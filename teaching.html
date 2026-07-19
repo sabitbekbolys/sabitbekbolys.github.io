@@ -7,125 +7,150 @@
   <meta name="description" content="Teaching and mentoring by Bolys Sabitbek: lecturing at Queen Mary University of London, Kazakh National University, and Satbayev University.">
   <link rel="canonical" href="https://sabitbekbolys.github.io/teaching.html">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="layout">
 
-  <!-- ======================= Sidebar (same on every page) ======================= -->
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-      <img class="portrait" src="assets/photo.jpg" alt="Portrait of Bolys Sabitbek" width="168" height="168">
-      <div class="identity">
-        <h1><a href="index.html">Bolys Sabitbek</a></h1>
-        <p class="role">Postdoctoral Researcher<br>
-          <a href="https://analysis-pde.org/">Ghent Analysis &amp; PDE Center</a><br>
-          Ghent University, Belgium</p>
-      </div>
-      <nav class="site-nav" aria-label="Site navigation">
-        <ul>
-          <li><a href="index.html">About</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="teaching.html" aria-current="page">Teaching</a></li>
-          <li><a href="outreach.html">Outreach</a></li>
-          <li><a href="cv.html">CV</a></li>
-        </ul>
-      </nav>
-      <ul class="profiles" aria-label="Academic profiles">
-        <li><a href="https://scholar.google.com/citations?user=mEzFxvAAAAAJ">Google Scholar</a></li>
-        <li><a href="https://arxiv.org/a/sabitbek_b_1.html">arXiv</a></li>
-        <li><a href="https://orcid.org/0000-0002-4580-8084">ORCID</a></li>
-        <li><a href="https://www.researchgate.net/profile/Bolys-Sabitbek">ResearchGate</a></li>
-        <li><a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1239340">MathSciNet</a></li>
-        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57190934859">Scopus</a></li>
-        <li><a href="https://github.com/sabitbekbolys">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/bolys-sabitbek-09938878/">LinkedIn</a></li>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">&#8706;</span>Bolys Sabitbek</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Site navigation">
+      <a href="index.html">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html" aria-current="page">Teaching</a>
+      <a href="outreach.html">Outreach</a>
+      <a href="cv.html">CV</a>
+    </nav>
+  </div>
+</header>
+
+<section class="banner" aria-label="Page header">
+  <canvas id="wave" data-variant="banner" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <p class="eyebrow">Lecturing &amp; mentoring</p>
+    <h1>Teaching</h1>
+  </div>
+</section>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+
+      <p class="sub-label" id="lecturer">Lecturer</p>
+      <ul class="timeline">
+
+        <!-- ───────────────────────────────────────────────────────────
+             ✏️  ADD NEW COURSE HERE
+             Copy the template below, paste it right after this comment
+             (newest first). Same template works in the "Teaching
+             assistant" list further down.
+
+             <li>
+               <span class="when">Fall 2026</span>
+               <div class="what">
+                 <strong>Course Title</strong>
+                 <span class="where">Graduate course, University Name</span>
+               </div>
+             </li>
+             ─────────────────────────────────────────────────────────── -->
+        <li>
+          <span class="when">Spring 2023</span>
+          <div class="what">
+            <strong>Statistical Thinking and Engineering Mathematics</strong>
+            <span class="where">Graduate course, Centre for Doctoral Training in
+            Data-Centric Engineering, Queen Mary University of London</span>
+          </div>
+        </li>
+        <li>
+          <span class="when">Fall 2020</span>
+          <div class="what">
+            <strong>Second Order Evolution Equations</strong>
+            <span class="where">Graduate course, Kazakh National University</span>
+          </div>
+        </li>
+        <li>
+          <span class="when">Fall 2018</span>
+          <div class="what">
+            <strong>Theoretical Mechanics and Applications</strong>
+            <span class="where">Undergraduate course, Satbayev University</span>
+          </div>
+        </li>
       </ul>
-      <p class="email">sabitbek.bolys [at] ugent.be</p>
+
+      <p class="sub-label" id="ta">Teaching assistant</p>
+      <ul class="timeline">
+        <li>
+          <span class="when">Fall 2017</span>
+          <div class="what">
+            <strong>Applied Problems of the Motion of an Artificial Satellite of the Planet</strong>
+            <span class="where">Kazakh National University</span>
+          </div>
+        </li>
+        <li>
+          <span class="when">Fall 2016</span>
+          <div class="what">
+            <strong>Celestial Mechanics</strong>
+            <span class="where">Kazakh National University</span>
+          </div>
+        </li>
+        <li>
+          <span class="when">Spring 2016</span>
+          <div class="what">
+            <strong>Applied Problems of Motion of an Artificial Satellite</strong>
+            <span class="where">Kazakh National University</span>
+          </div>
+        </li>
+      </ul>
+
+      <p class="sub-label" id="mentoring">Mentoring</p>
+      <p class="lede">I supervised two master&rsquo;s students at Kazakh National University:</p>
+      <ul class="timeline">
+        <li>
+          <span class="when">MSc</span>
+          <div class="what">
+            <strong>Almaz Abilkhassym</strong>
+            <p>Blow-up solutions to <em>p</em>-sub-Laplacian heat equations on the Heisenberg group</p>
+          </div>
+        </li>
+        <li>
+          <span class="when">MSc</span>
+          <div class="what">
+            <strong>Akmerei Zharqynbek</strong>
+            <p>Geometric Hardy inequality in Engel groups</p>
+          </div>
+        </li>
+      </ul>
+
     </div>
-  </aside>
+  </section>
+</main>
 
-  <!-- ================================ Content ================================= -->
-  <main class="content">
-
-    <h2 class="page-title">Teaching</h2>
-
-    <h2 id="lecturer">Lecturer</h2>
-    <ul class="timeline">
-      <li>
-        <span class="when">Spring 2023</span>
-        <div class="what">
-          <strong>Statistical Thinking and Engineering Mathematics</strong>
-          <span class="where">— graduate course, Centre for Doctoral Training in
-          Data-Centric Engineering, Queen Mary University of London</span>
-        </div>
-      </li>
-      <li>
-        <span class="when">Fall 2020</span>
-        <div class="what">
-          <strong>Second Order Evolution Equations</strong>
-          <span class="where">— graduate course, Kazakh National University</span>
-        </div>
-      </li>
-      <li>
-        <span class="when">Fall 2018</span>
-        <div class="what">
-          <strong>Theoretical Mechanics and Applications</strong>
-          <span class="where">— undergraduate course, Satbayev University</span>
-        </div>
-      </li>
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <p class="footer-eq">&#9633;u = 0</p>
+      <p>&copy; 2026 Bolys Sabitbek &middot; Ghent Analysis &amp; PDE Center, Ghent University</p>
+      <p class="email">sabitbek.bolys [at] ugent.be</p>
+      <p><a href="https://github.com/sabitbekbolys/sabitbekbolys.github.io">Source on GitHub</a></p>
+    </div>
+    <ul class="footer-links" aria-label="Academic profiles">
+      <li><a href="https://scholar.google.com/citations?user=mEzFxvAAAAAJ">Google Scholar</a></li>
+      <li><a href="https://arxiv.org/a/sabitbek_b_1.html">arXiv</a></li>
+      <li><a href="https://orcid.org/0000-0002-4580-8084">ORCID</a></li>
+      <li><a href="https://www.researchgate.net/profile/Bolys-Sabitbek">ResearchGate</a></li>
+      <li><a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1239340">MathSciNet</a></li>
+      <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57190934859">Scopus</a></li>
+      <li><a href="https://github.com/sabitbekbolys">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/bolys-sabitbek-09938878/">LinkedIn</a></li>
     </ul>
+  </div>
+</footer>
 
-    <h2 id="ta">Teaching assistant</h2>
-    <ul class="timeline">
-      <li>
-        <span class="when">Fall 2017</span>
-        <div class="what">
-          <strong>Applied Problems of the Motion of an Artificial Satellite of the Planet</strong>
-          <span class="where">— Kazakh National University</span>
-        </div>
-      </li>
-      <li>
-        <span class="when">Fall 2016</span>
-        <div class="what">
-          <strong>Celestial Mechanics</strong>
-          <span class="where">— Kazakh National University</span>
-        </div>
-      </li>
-      <li>
-        <span class="when">Spring 2016</span>
-        <div class="what">
-          <strong>Applied Problems of Motion of an Artificial Satellite</strong>
-          <span class="where">— Kazakh National University</span>
-        </div>
-      </li>
-    </ul>
-
-    <h2 id="mentoring">Mentoring</h2>
-    <p>I supervised two master’s students at Kazakh National University:</p>
-    <ul class="timeline">
-      <li>
-        <span class="when"></span>
-        <div class="what">
-          <strong>Almaz Abilkhassym</strong>
-          <p>Blow-up solutions to <em>p</em>-sub-Laplacian heat equations on the Heisenberg group</p>
-        </div>
-      </li>
-      <li>
-        <span class="when"></span>
-        <div class="what">
-          <strong>Akmerei Zharqynbek</strong>
-          <p>Geometric Hardy inequality in Engel groups</p>
-        </div>
-      </li>
-    </ul>
-
-    <footer class="site-footer">
-      <p>© 2026 Bolys Sabitbek ·
-      <a href="https://github.com/sabitbekbolys/sabitbekbolys.github.io">Source on GitHub</a></p>
-    </footer>
-
-  </main>
-</div>
+<script src="js/wave.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
