@@ -1,0 +1,467 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=2.5cm]{geometry}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem*{remark}{Remark}
+\newtheorem{lemma}[theorem]{Lemma}
+\title{Sector decomposition for an anisotropic oscillatory integral}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Setting}
+
+Let $\ell_1,\dots,\ell_d \ge 0$ and, for $s>0$, let $A_s = \operatorname{diag}(s^{\ell_1},\dots,s^{\ell_d})$. For $t \ge 1$ and $\xi \in \mathbb{R}^d$ we define the phase
+\[
+\psi(t,\xi) = \int_1^t |A_s\xi|\,ds .
+\]
+We study the oscillatory integral
+\[
+I(t,x) = \int_{\mathbb{R}^d} e^{i(x\cdot\xi - \psi(t,\xi))}\, |A_t\xi|^{-1}\, \chi(\xi)\, d\xi ,
+\]
+where $\chi$ is a smooth cutoff supported in the annulus $\{\tfrac12 \le |\xi| \le 2\}$.
+
+\section{Splitting into sectors}
+
+We split the frequency space into $d$ sectors. Sector $k$ is the set of $\xi$ for which $t^{\ell_k}|\xi_k|$ is the largest of the weights $t^{\ell_1}|\xi_1|,\dots,t^{\ell_d}|\xi_d|$. On this sector
+\[
+t^{\ell_k}|\xi_k| \ge \frac{|A_t\xi|}{\sqrt d}.
+\]
+We fix $k$ and work on sector $k$. For $j \ne k$ we introduce the ratios
+\[
+\eta_j = \frac{t^{\ell_j}\xi_j}{t^{\ell_k}\xi_k},
+\]
+which satisfy $|\eta_j| \le 1$ on this sector. We write $\eta = (\eta_j)_{j\ne k} \in \mathbb{R}^{d-1}$.
+
+\section{The phase in the new variables}
+
+\paragraph{The amplitude.} Since
+\[
+|A_t\xi|^2 = t^{2\ell_k}\xi_k^2 + \sum_{j\ne k} t^{2\ell_j}\xi_j^2 = t^{2\ell_k}\xi_k^2\Big(1+\sum_{j\ne k}\eta_j^2\Big),
+\]
+we have
+\[
+|A_t\xi| = t^{\ell_k}|\xi_k|\,(1+|\eta|^2)^{1/2},
+\qquad
+|A_t\xi|^{-1} = t^{-\ell_k}|\xi_k|^{-1}(1+|\eta|^2)^{-1/2}.
+\]
+
+\paragraph{The phase $\psi$.} In the same way,
+\[
+|A_s\xi| = s^{\ell_k}|\xi_k|\Big(1+\sum_{j\ne k} \frac{s^{2\ell_j}\xi_j^2}{s^{2\ell_k}\xi_k^2}\Big)^{1/2}.
+\]
+We substitute $s = \sigma t$, so $ds = t\,d\sigma$. Since $s^{2(\ell_j-\ell_k)}\xi_j^2/\xi_k^2 = \sigma^{2(\ell_j-\ell_k)}\eta_j^2$, we obtain
+\[
+\psi(t,\xi) = t^{\ell_k+1}|\xi_k|\, G(t,\eta),
+\qquad
+G(t,\eta) = \int_{1/t}^1 \sigma^{\ell_k}\Big(1+\sum_{j\ne k}\sigma^{2(\ell_j-\ell_k)}\eta_j^2\Big)^{1/2} d\sigma .
+\]
+
+\paragraph{The linear term.} We aim at a bound that is uniform in $x$, so we may replace $x$ by $A_t x$ without changing $\sup_x |I(t,x)|$. The linear part of the phase then becomes
+\[
+A_t x\cdot\xi = x_k t^{\ell_k} \xi_k + \sum_{j\ne k} t^{\ell_j} x_j\xi_j
+= x_k t^{\ell_k}\xi_k + t^{\ell_k}\xi_k \sum_{j\ne k} x_j\eta_j .
+\]
+
+\paragraph{The measure.} For fixed $\xi_k$, the change of variables $\xi_j = t^{\ell_k-\ell_j}\xi_k\eta_j$, $j\ne k$, gives
+\[
+d\xi = |\xi_k|^{d-1}\prod_{j\ne k} t^{\ell_k-\ell_j}\; d\xi_k\, d\eta
+= t^{\,d\ell_k - \sum_{j=1}^d \ell_j}\, |\xi_k|^{d-1}\, d\xi_k\, d\eta .
+\]
+
+
+
+\section{The sector integral}
+
+Denote by $I_k$ the part of $I$ coming from sector $k$. On this sector $|\eta_j|\le 1$ for $j\ne k$. Collecting the
+formulas above,
+\[
+I_k = t^{\,d\ell_k-\sum_j\ell_j-\ell_k}\int_{\mathbb{R}} e^{i x_k t^{\ell_k}\xi_k}\,|\xi_k|^{d-2}
+\int_{[-1,1]^{d-1}} e^{i\lambda\,\Phi(\eta)}\, b(\xi_k,\eta)\, d\eta\, d\xi_k ,
+\]
+where $\lambda = t^{\ell_k+1}|\xi_k|$, and the phase
+\[
+\Phi(\eta) = \frac{\xi_k}{|\xi_k|}\,\frac1t\sum_{j\ne k}x_j\eta_j - G(t,\eta),
+\]
+and the amplitude is
+\[
+b(\xi_k,\eta)=(1+|\eta|^2)^{-1/2}\,\chi\Big(\xi_k e_k+\sum_{j\ne k} t^{\ell_k-\ell_j}\xi_k\eta_j\,e_j\Big).
+\]
+The second factor is
+the cutoff $\chi$ in the new variables. Since
+$|\xi|=|\xi_k|\big(1+\sum_{j\ne k}t^{2(\ell_k-\ell_j)}\eta_j^2\big)^{1/2}$,
+the amplitude $b$ is supported where
+\[
+\frac12\le |\xi_k|\Big(1+\sum_{j\ne k}t^{2(\ell_k-\ell_j)}\eta_j^2\Big)^{1/2}\le 2 .
+\]
+In particular, with $\ell_{\min}=\min_j\ell_j$, on the support of $b$ we have
+$|\xi_k|\le 2$ and $|\xi_k|\ge t^{\ell_{\min}-\ell_k}/(2\sqrt d)$, so
+$\lambda\ge t^{1+\ell_{\min}}/(2\sqrt d)$ is indeed large.
+
+
+\section{Hessian of the phase}
+
+Set
+\[
+H(\sigma,\eta)=\Big(1+\sum_{j\ne k}\sigma^{2(\ell_j-\ell_k)}\eta_j^2\Big)^{1/2},
+\qquad\text{so that}\qquad
+G(t,\eta)=\int_{1/t}^1\sigma^{\ell_k}\,H(\sigma,\eta)\,d\sigma .
+\]
+Throughout, $t>1$ and the indices $i,j$ run over $\{1,\dots,d\}\setminus\{k\}$.
+
+\paragraph{First derivatives.} Since
+$\partial_{\eta_j}H=\sigma^{2(\ell_j-\ell_k)}\eta_j\,H^{-1}$, we have
+\[
+\partial_{\eta_j}\Phi(\eta)=\frac{\xi_k}{|\xi_k|}\,\frac{x_j}{t}
+-\eta_j\int_{1/t}^1\sigma^{2\ell_j-\ell_k}\,H^{-1}\,d\sigma .
+\]
+
+\paragraph{Second derivatives.} The linear part of $\Phi$ has zero Hessian, so
+$\nabla_\eta^2\Phi=-\nabla_\eta^2G$, which depends neither on $x$ nor on the sign
+of $\xi_k$. Differentiating once more,
+\[
+\partial_{\eta_i}\partial_{\eta_j}G(t,\eta)
+=\int_{1/t}^1\sigma^{\ell_k}\,H^{-3}
+\Big(\delta_{ij}\,\sigma^{2(\ell_j-\ell_k)}\,H^2
+-\sigma^{2(\ell_i+\ell_j-2\ell_k)}\eta_i\eta_j\Big)\,d\sigma .
+\]
+
+\paragraph{The quadratic form.} Let $w=(w_j)_{j\ne k}\in\mathbb{R}^{d-1}$ and $D(\sigma)=\operatorname{diag}\big(\sigma^{2(\ell_j-\ell_k)}\big)_{j\ne k}$. Then the second derivatives give
+\[
+-\nabla_\eta^2\Phi
+=\int_{1/t}^1\sigma^{\ell_k}H^{-3}\Big(H^2D-(D\eta)(D\eta)^{T}\Big)\,d\sigma ,
+\]
+so that
+\[
+-\langle \nabla_\eta^2\Phi\,w, w\rangle
+=\int_{1/t}^1\sigma^{\ell_k}H^{-3}\Big(H^2\langle Dw,w\rangle-\langle D\eta,w\rangle^2\Big)\,d\sigma .
+\]
+With $v=D^{1/2}\eta$ and $u=D^{1/2}w$, the bracket equals
+$\big\langle (H^2 I-vv^{T})u,u\big\rangle$, where $|v|^2=H^2-1$.
+
+$$|u|^2\le\big\langle (H^2I-vv^{T})u,u\big\rangle\le H^2|u|^2,\qquad |u|^2=S .$$
+\[
+\int_{1/t}^1\sigma^{\ell_k}H^{-3}\,S\,d\sigma
+\;\le\; -\langle \nabla_\eta^2\Phi\,w, w\rangle \;\le\;
+\int_{1/t}^1\sigma^{\ell_k}H^{-1}\,S\,d\sigma .
+\]
+For $w\ne0$ the left side is positive, so $-\nabla_\eta^2\Phi$ is positive
+definite and $\Phi$ is strictly concave in $\eta$.
+\section{Control of higher derivatives of the phase}
+
+Let $\alpha=(\alpha_j)_{j\ne k}$ be a multi-index with $|\alpha|\ge 3$. Since the
+linear part of $\Phi$ is killed by two derivatives,
+$\partial_\eta^\alpha\Phi=-\partial_\eta^\alpha G$, so it suffices to bound
+$\partial_\eta^\alpha G$.
+
+\paragraph{Reduction.} For fixed $\sigma$ put $y_j=\sigma^{\ell_j-\ell_k}\eta_j$,
+$j\ne k$, and $\langle y\rangle=(1+|y|^2)^{1/2}$. Then $H(\sigma,\eta)=\langle y\rangle$.
+Since each $y_j$ is a multiple of $\eta_j$ alone, the chain rule gives
+\[
+\partial_\eta^\alpha H
+=\prod_{j\ne k}\sigma^{\alpha_j(\ell_j-\ell_k)}\;\big(\partial_y^\alpha\langle y\rangle\big).
+\]
+
+\paragraph{Derivatives of $\langle y\rangle$.} We claim that for $|\alpha|\ge1$,
+$\partial_y^\alpha\langle y\rangle$ is a finite linear combination of terms
+\[
+y^\beta\,\langle y\rangle^{1-2m}\qquad\text{with}\qquad m\ge1,\quad 2m-|\beta|=|\alpha| .
+\]
+For $|\alpha|=1$ this holds, since $\partial_{y_i}\langle y\rangle=y_i\langle y\rangle^{-1}$.
+Differentiating $y^\beta\langle y\rangle^{1-2m}$ in $y_i$ gives two terms:
+$\beta_i\,y^{\beta-\delta_i}\langle y\rangle^{1-2m}$, which vanishes if $\beta_i=0$, and
+$(1-2m)\,y^{\beta+\delta_i}\langle y\rangle^{1-2(m+1)}$, where $\delta_i$ is the
+multi-index with $1$ in position $i$ and $0$ elsewhere. In both terms $2m-|\beta|$
+increases by one, which proves the claim. Since $|y^\beta|\le\langle y\rangle^{|\beta|}$,
+each term is bounded by $\langle y\rangle^{|\beta|+1-2m}=\langle y\rangle^{1-|\alpha|}$, so
+\[
+\big|\partial_y^\alpha\langle y\rangle\big|\le C_\alpha\,\langle y\rangle^{1-|\alpha|} .
+\]
+
+\paragraph{The bound.} Differentiating under the integral sign and using
+$\langle y\rangle=H$, we obtain
+\[
+\big|\partial_\eta^\alpha\Phi(\eta)\big|=\big|\partial_\eta^\alpha G(t,\eta)\big|
+\le C_\alpha\int_{1/t}^1\sigma^{\,\ell_k+\sum_{j\ne k}\alpha_j(\ell_j-\ell_k)}\,
+H(\sigma,\eta)^{1-|\alpha|}\,d\sigma ,
+\]
+with $C_\alpha$ depending only on $\alpha$. Since $H\ge 1$, in particular
+\[
+\big|\partial_\eta^\alpha\Phi(\eta)\big|
+\le C_\alpha\int_{1/t}^1\sigma^{\,\ell_k+\sum_{j\ne k}\alpha_j(\ell_j-\ell_k)}\,d\sigma .
+\]
+The same bounds hold for $\partial_\eta^\alpha G$ with $|\alpha|=1,2$.
+
+
+\section{Control of higher derivatives of the phase}
+
+For $|\alpha|\ge 2$ the linear part of $\Phi$ disappears, so
+$\partial_\eta^\alpha\Phi=-\partial_\eta^\alpha G$, and it suffices to study $G$.
+We will see that $G$ has no derivative bounds uniform in $t$, but it does have
+good bounds once derivatives are measured in the right units.
+
+\paragraph{Good, bad and oscillatory directions.} For $j\ne k$ we call the direction
+$j$ \emph{good} if $\ell_j\ge\ell_k$ and \emph{bad} if $\ell_j<\ell_k$. We call it
+\emph{oscillatory} if $2\ell_j-\ell_k+1>0$, and write $\mathcal O$ for the set of
+oscillatory directions. Every good direction is oscillatory, since $\ell_k>-1$.
+We define the weights
+\[
+w_j(\eta)=1 \ \ (j \text{ good}),\qquad w_j(\eta)=|\eta_j| \ \ (j \text{ bad}).
+\]
+
+\paragraph{The problem.} High derivatives in a bad direction blow up at $\eta_j=0$.
+Indeed, expanding $H=(1+\sigma^{2(\ell_j-\ell_k)}\eta_j^2)^{1/2}$ in powers of $\eta_j$,
+\[
+\partial_{\eta_j}^{2N}G(t,0)=(2N)!\binom{1/2}{N}\int_{1/t}^1\sigma^{\,\ell_k+2N(\ell_j-\ell_k)}\,d\sigma ,
+\]
+and since $\ell_j<\ell_k$, the exponent is below $-1$ for $N$ large, so this tends to
+infinity as $t\to\infty$. The reason is the crossover: near $\eta_j=0$ the coordinate
+$j$ dominates at early times $\sigma\sim1/t$.
+
+\paragraph{The derivatives of $H$.} With $y_m=\sigma^{\ell_m-\ell_k}\eta_m$ we have
+$H=\langle y\rangle$, and $\langle y\rangle$ behaves like a function homogeneous of
+degree one, so $|\partial_y^\alpha\langle y\rangle|\le C_\alpha\langle y\rangle^{1-|\alpha|}$.
+Writing $\mu_m=\sigma^{\ell_m-\ell_k}$, the chain rule gives
+\[
+\big|\partial_\eta^\alpha H\big|\le C_\alpha\,\mu^\alpha\,H^{1-|\alpha|},
+\qquad \mu^\alpha=\prod_{m\ne k}\mu_m^{\alpha_m}.
+\]
+Two simple facts control each factor $\mu_m/H$:
+\begin{itemize}
+	\item if $m$ is good, then $\mu_m\le1\le H$, so $\mu_m/H\le1$;
+	\item if $m$ is bad, then $H\ge\mu_m|\eta_m|$, so $\mu_m/H\le|\eta_m|^{-1}$.
+\end{itemize}
+In both cases $\mu_m/H\le w_m^{-1}$.
+
+\begin{lemma}\label{lem:weighted}
+	Let $|\alpha|\ge2$ with $\alpha_m=0$ for $m\notin\mathcal O$, and choose
+	$i,j\in\mathcal O$ (possibly $i=j$) such that $\alpha'=\alpha-\delta_i-\delta_j$ has
+	nonnegative entries. Then for $t\ge2$,
+	\[
+	\big|\partial_\eta^\alpha G(t,\eta)\big|\le C_\alpha\prod_{m\ne k}w_m(\eta)^{-\alpha'_m}.
+	\]
+\end{lemma}
+
+In words: two derivatives in oscillatory directions are free, and each further
+derivative in a bad direction costs a factor $1/|\eta_m|$.
+
+\begin{proof}
+	Since $|\alpha|=|\alpha'|+2$, we can split the bound for $\partial_\eta^\alpha H$ as
+	\[
+	\mu^\alpha H^{1-|\alpha|}=\frac{\mu_i\mu_j}{H}\,\prod_{m\ne k}\Big(\frac{\mu_m}{H}\Big)^{\alpha'_m}
+	\le\frac{\mu_i\mu_j}{H}\,\prod_{m\ne k}w_m^{-\alpha'_m}.
+	\]
+	It remains to integrate the first factor. Using $H\ge1$ and $\mu_i\mu_j\le\frac12(\mu_i^2+\mu_j^2)$,
+	\[
+	\int_{1/t}^1\sigma^{\ell_k}\,\frac{\mu_i\mu_j}{H}\,d\sigma
+	\le\frac12\int_0^1\big(\sigma^{2\ell_i-\ell_k}+\sigma^{2\ell_j-\ell_k}\big)\,d\sigma<\infty,
+	\]
+	because $i,j\in\mathcal O$ means $2\ell_i-\ell_k>-1$ and $2\ell_j-\ell_k>-1$.
+\end{proof}
+
+\paragraph{How the weights are used.} Zoom by setting $\omega=\lambda^{1/2}\eta$.
+Then $\partial_\omega^\alpha(\lambda G)=\lambda^{1-|\alpha|/2}\partial_\eta^\alpha G
+=\lambda^{-|\alpha'|/2}\partial_\eta^\alpha G$, and Lemma~\ref{lem:weighted} gives
+\[
+\big|\partial_\omega^\alpha(\lambda G)\big|\le C_\alpha\prod_{m\ne k}\big(\lambda^{1/2}w_m\big)^{-\alpha'_m}.
+\]
+For good $m$ we have $\lambda^{1/2}w_m=\lambda^{1/2}\ge1$, and for bad $m$ we have
+$\lambda^{1/2}w_m=|\omega_m|$. So all derivatives of $\lambda G$ in $\omega$ are bounded
+wherever $|\eta_m|\ge\lambda^{-1/2}$ in the bad directions. This leads to the
+following splitting of the $\eta$ integral:
+\begin{itemize}
+	\item on the strips $|\eta_m|\le\lambda^{-1/2}$, $m$ bad, we integrate trivially; a
+	strip has width $\lambda^{-1/2}$, which is exactly the gain oscillation would give;
+	\item on the rest, the phase $\lambda G$ is convex with bounded derivatives in
+	$\omega$, so the $\omega$ integral is bounded and each oscillatory direction gives
+	the factor $\lambda^{-1/2}$;
+	\item directions outside $\mathcal O$ are never differentiated and are integrated
+	trivially.
+\end{itemize}
+\section{Stationary phase estimate}
+
+\paragraph{Smooth sectors.} The stationary phase estimate below needs a smooth
+amplitude, so we use smooth sectors. Fix smooth $\rho_1,\dots,\rho_d$ on
+$\mathbb{S}^{d-1}$ with $\sum_k\rho_k=1$ and $\rho_k(\omega)=0$ unless
+$|\omega_k|\ge\frac{1}{2\sqrt d}$, and insert $\rho_k(A_t\xi/|A_t\xi|)$ into $I_k$.
+Such a partition exists since $\max_k|\omega_k|\ge 1/\sqrt d$ on $\mathbb{S}^{d-1}$.
+The $\eta$ integral then runs over $\mathbb{R}^{d-1}$, with amplitude
+\[
+b(\xi_k,\eta)=(1+|\eta|^2)^{-1/2}\,\tilde\chi(\xi_k,\eta)\,
+\rho_k\Big(\frac{\xi_k}{|\xi_k|}\,\frac{e_k+\sum_{j\ne k}\eta_je_j}{(1+|\eta|^2)^{1/2}}\Big).
+\]
+Since the $k$th component of the argument of $\rho_k$ is $\pm(1+|\eta|^2)^{-1/2}$,
+$b(\xi_k,\cdot)$ is smooth and supported in $|\eta|\le 2\sqrt d$.
+
+\paragraph{The estimate.} For $b\in C_0^\infty(\mathbb{R}^n)$ with support $K$, let
+$K_1$ be the set of points at sup distance at most $1$ from $K$, and set
+\[
+M_m=\sum_{2\le|\alpha|\le m}\ \sup_{K_1}|\partial^\alpha\Phi|,\qquad
+N_m=\sum_{|\alpha|\le m}\ \sup_{K}|\partial^\alpha b|,\qquad
+a_0=\inf_{K_1}\big|\det\nabla^2\Phi\big| .
+\]
+
+\begin{theorem}[Alazard, Burq, Zuily, Theorem 3]\label{thm:ABZ}
+	Let $\Phi$ be real and smooth near $K_1$, with $a_0>0$ and $\nabla\Phi$ injective
+	on $K_1$. Then for all $\lambda\ge1$,
+	\[
+	\Big|\int_{\mathbb{R}^n}e^{i\lambda\Phi(\eta)}\,b(\eta)\,d\eta\Big|
+	\le \frac{C_n}{a_0}\,\big(1+M_{n+2}\big)^{n/2}\,N_{n+1}\,\lambda^{-n/2},
+	\]
+	where $C_n$ depends only on $n$.
+\end{theorem}
+
+\paragraph{Checking the hypotheses.} We apply Theorem~\ref{thm:ABZ} with $n=d-1$,
+for fixed $t$, $x$, $\xi_k$. Then $K_1\subset[-R,R]^{d-1}$ with $R=2\sqrt d+1$.
+Let $\ell_{\min}=\min_j\ell_j$.
+\begin{itemize}
+	\item \emph{Injectivity.} $\nabla_\eta^2\Phi$ is negative definite on
+	$\mathbb{R}^{d-1}$, so for $\eta\ne\eta'$,
+	\[
+	\big\langle\nabla\Phi(\eta)-\nabla\Phi(\eta'),\eta-\eta'\big\rangle
+	=\int_0^1\big\langle\nabla_\eta^2\Phi\big(\eta'+s(\eta-\eta')\big)(\eta-\eta'),\eta-\eta'\big\rangle\,ds<0 .
+	\]
+	Hence $\nabla\Phi$ is injective, and no further localization is needed.
+	\item \emph{$a_0$.} All eigenvalues of $-\nabla_\eta^2\Phi(\eta)$ are positive, so
+	$a_0\ge\inf_{[-R,R]^{d-1}}\mu^{d-1}$, where $\mu(\eta)$ is the smallest eigenvalue,
+	bounded below by the Hessian section.
+	\item \emph{$M_{d+1}$.} Since $\partial_\eta^\alpha\Phi=-\partial_\eta^\alpha G$ for
+	$|\alpha|\ge2$, it is bounded by the section on higher derivatives.
+	\item \emph{$N_d$.} The factors $(1+|\eta|^2)^{-1/2}$ and $\rho_k(\cdots)$ are smooth
+	in $\eta$ and independent of $t$. Each $\partial_{\eta_j}$ falling on $\tilde\chi$
+	produces a factor $t^{\ell_k-\ell_j}\xi_k$, and $|\xi_k|\le2$, so
+	\[
+	N_d\le C_d\,t^{\,d(\ell_k-\ell_{\min})} .
+	\]
+	\item \emph{$\lambda\ge1$.} On the support of $b$,
+	$\lambda=t^{\ell_k+1}|\xi_k|\ge c_d\,t^{1+\ell_{\min}}$, which is $\ge1$ for $t$ large.
+\end{itemize}
+
+\paragraph{Conclusion.} For $t$ large,
+\[
+\Big|\int_{\mathbb{R}^{d-1}}e^{i\lambda\Phi(\eta)}\,b(\xi_k,\eta)\,d\eta\Big|
+\le \frac{C_d}{a_0}\,\big(1+M_{d+1}\big)^{\frac{d-1}{2}}\,t^{\,d(\ell_k-\ell_{\min})}\,
+\big(t^{\ell_k+1}|\xi_k|\big)^{-\frac{d-1}{2}} .
+\]
+None of $a_0$, $M_{d+1}$, $N_d$ depends on $x$, so the bound is uniform in $x$.
+
+\section{Completion of the proof}
+
+Below, $n=d-1$, and the inner integral is
+\[
+J=\int_{\mathbb{R}^{n}} e^{i\lambda\Phi(\eta)}\, b(\eta)\, d\eta ,
+\qquad \lambda=t^{\ell_k+1}|\xi_k| ,
+\]
+with $t$, $x$, $\xi_k$ fixed. We write $C$ for constants depending only on $d$ and
+the $\ell_j$.
+
+\paragraph{Step 0. Three groups of directions.} For indices $j\ne k$ we set
+\begin{itemize}
+	\item $\mathcal O$ = oscillatory directions, $2\ell_j-\ell_k+1>0$;
+	\item $\mathcal T$ = the rest, the non-oscillatory directions;
+	\item $\mathcal B$ = bad oscillatory directions, $\ell_j<\ell_k$ and $j\in\mathcal O$.
+\end{itemize}
+
+\paragraph{Step 1. Zoom.} Put $\eta=\lambda^{-1/2}\omega$. Then $d\eta=\lambda^{-n/2}d\omega$ and
+\[
+J=\lambda^{-n/2}\int e^{i\tilde\Phi(\omega)}\,\tilde b(\omega)\,d\omega ,
+\qquad
+\tilde\Phi(\omega)=\lambda\,\Phi(\lambda^{-1/2}\omega),
+\quad
+\tilde b(\omega)=b(\lambda^{-1/2}\omega).
+\]
+By the chain rule,
+\[
+\partial_\omega^\alpha\tilde\Phi(\omega)=\lambda^{1-|\alpha|/2}\,(\partial_\eta^\alpha\Phi)(\lambda^{-1/2}\omega).
+\]
+For $|\alpha|=2$ the power of $\lambda$ is zero, so the Hessian in $\omega$ equals the
+Hessian in $\eta$. All the decay $\lambda^{-n/2}$ now sits in front. The remaining
+$\omega$ integral only has to be bounded, which is Theorem~\ref{thm:ABZ} with $\lambda=1$.
+
+\paragraph{Step 2. Strip cutoffs in $\mathcal B$.} Take $\psi\in C_0^\infty(\mathbb{R})$
+with $\psi=1$ on $[-2,2]$ and $\psi=0$ outside $[-3,3]$. For each $m\in\mathcal B$ write
+$1=\psi(\omega_m)+(1-\psi(\omega_m))$ and expand the product. This gives $2^{|\mathcal B|}$
+pieces $J_S$, one for each $S\subset\mathcal B$ (the directions placed in strips):
+\[
+J_S=\lambda^{-n/2}\int e^{i\tilde\Phi}\,\tilde b\,
+\prod_{m\in S}\psi(\omega_m)\prod_{m\in\mathcal B\setminus S}\big(1-\psi(\omega_m)\big)\,d\omega .
+\]
+In $J_S$, the active variables are $A=\mathcal O\setminus S$. The variables in
+$S\cup\mathcal T$ are frozen and integrated last.
+
+\paragraph{Step 3. Theorem~\ref{thm:ABZ} in the active variables, with $\lambda=1$.}
+Freeze $\omega_{S\cup\mathcal T}$ and apply Theorem~\ref{thm:ABZ} in
+$\omega_A\in\mathbb{R}^{|A|}$. The theorem gives $\frac{C}{a_0}(1+M)^{|A|/2}N$ with no
+factor $|K|$, so the support of size $\lambda^{1/2}$ in $\omega$ costs nothing. We check
+the hypotheses.
+\begin{enumerate}
+	\item[(a)] \emph{$a_0$.} From the Hessian section, restricting the $\sigma$ integral
+	to $[1/2,1]$, we have $-\nabla_\eta^2\Phi\ge cI$ on $|\eta|\le 3\sqrt d$. The
+	neighborhood $\tilde K_1$ (sup distance $1$ in $\omega$) is at sup distance
+	$\lambda^{-1/2}\le1$ in $\eta$, so it stays in this ball. A principal submatrix of a
+	matrix $\ge cI$ is again $\ge cI$. Hence $a_0\ge c^{|A|}$.
+	\item[(b)] \emph{Injectivity.} $\tilde\Phi$ is strictly concave in $\omega_A$ on all
+	of $\mathbb{R}^{|A|}$, so $\nabla_{\omega_A}\tilde\Phi$ is injective by the
+	monotonicity argument of the previous section.
+	\item[(c)] \emph{$\tilde M$.} Let $|\alpha|\ge2$ with $\alpha$ supported in
+	$A\subset\mathcal O$. Then $\partial^\alpha\Phi=-\partial^\alpha G$, and
+	Lemma~\ref{lem:weighted} gives
+	\[
+	|\partial_\omega^\alpha\tilde\Phi|=\lambda^{1-|\alpha|/2}|\partial_\eta^\alpha G|
+	\le C\prod_{m}\big(\lambda^{1/2}w_m\big)^{-\alpha'_m}.
+	\]
+	For good $m$, $\lambda^{1/2}w_m=\lambda^{1/2}\ge1$. For bad $m\in A$,
+	$\lambda^{1/2}w_m=|\omega_m|\ge1$ on $\tilde K_1$, since $1-\psi(\omega_m)$ vanishes
+	for $|\omega_m|\le2$. So $\tilde M_{|A|+2}\le C$.
+	\item[(d)] \emph{$\tilde N$.} One $\omega_j$ derivative is
+	$\lambda^{-1/2}\partial_{\eta_j}$. On $(1+|\eta|^2)^{-1/2}$ and on $\rho_k$ this costs
+	at most $C\lambda^{-1/2}\le C$. On $\tilde\chi$ it produces the factor
+	$t^{\ell_k-\ell_j}\xi_k$, so the cost is
+	\[
+	\lambda^{-1/2}\,t^{\ell_k-\ell_j}|\xi_k|=t^{-(2\ell_j-\ell_k+1)/2}\,|\xi_k|^{1/2}
+	\le\sqrt2\qquad(j\in\mathcal O,\ |\xi_k|\le2).
+	\]
+	Derivatives of the strip cutoffs are $O(1)$. Hence $\tilde N_{|A|+1}\le C$.
+\end{enumerate}
+Conclusion of Step 3: for every frozen $\omega_{S\cup\mathcal T}$,
+\[
+\Big|\int e^{i\tilde\Phi}\,\tilde b\,(\text{cutoffs})\,d\omega_A\Big|\le C .
+\]
+
+\paragraph{Step 4. Trivial integration in $S$ and $\mathcal T$.}
+\begin{itemize}
+	\item $m\in S$. The cutoff $\psi(\omega_m)$ lives in $|\omega_m|\le3$, so this costs
+	a factor $6$.
+	\item $j\in\mathcal T$. On the support of $\tilde\chi$ we have $|\xi_j|\le2$ with
+	$\xi_j=t^{\ell_k-\ell_j}\xi_k\eta_j$, so $|\eta_j|\le 2t^{\ell_j-\ell_k}/|\xi_k|$.
+	In $\omega$ this is a width
+	\[
+	W_j=\lambda^{1/2}\cdot\frac{2t^{\ell_j-\ell_k}}{|\xi_k|}
+	=2\,t^{(2\ell_j-\ell_k+1)/2}\,|\xi_k|^{-1/2}
+	\le 2\,|\xi_k|^{-1/2}\qquad(j\in\mathcal T).
+	\]
+\end{itemize}
+
+\begin{remark}
+	The gain in the $\mathcal T$ directions is $\lambda^{-1/2}$ only up to the factor
+	$|\xi_k|^{-1/2}$. This $|\xi_k|$ bookkeeping must be handled in the outer $\xi_k$
+	integral.
+\end{remark}
+
+\paragraph{Step 5. Result.} Summing the $2^{|\mathcal B|}$ pieces,
+\[
+\boxed{\ \Big|\int_{\mathbb{R}^{d-1}}e^{i\lambda\Phi(\eta)}\,b(\xi_k,\eta)\,d\eta\Big|
+\le C\,\lambda^{-\frac{d-1}{2}}\prod_{j\in\mathcal T}t^{\frac{2\ell_j-\ell_k+1}{2}}\,|\xi_k|^{-1/2}\ }
+\]
+uniformly in $x$ and $t\ge t_0$. When $\mathcal T$ is empty, this is the full rate
+$\lambda^{-(d-1)/2}$ with no loss from $N_d$.
+
+\paragraph{Main idea.} After zooming to $\omega=\lambda^{1/2}\eta$, the oscillatory
+condition $2\ell_j-\ell_k+1>0$ is exactly what keeps the amplitude smooth at scale $1$.
+Every direction where it fails is thinner than the stationary phase scale, so it needs
+no oscillation.
+
+\end{document}
