@@ -220,7 +220,7 @@ The proof uses three coordinate systems, in this order, each for one job.
 \smallskip\lab{cSlate}{Why $\eta$ before $\omega$.} $G$ has its $t$-uniform properties in $\eta$, and
 $\lambda$ depends on $\xi_k$, so the zoom comes only once $\xi_k$ is fixed.
 
-\lab{cSlate}{Helpers,} which change no integral: $u=D^{1/2}w$ puts the Hessian in
+\lab{cSlate}{Helpers,} which change no integral: $u=D^{1/2}v$ puts the Hessian in
 Cauchy--Schwarz form (Step 2), and $y_j=\sigma^{\ell_j-\ell_k}\eta_j$ turns $H$ into
 $(1+|y|^2)^{1/2}$ (Step 3).
 \begin{keybox}[cSlate]
@@ -293,10 +293,10 @@ and $x$ enters only through a linear term.}
 \[
 -\nabla_\eta^2\Phi=\int_{1/t}^1\sigma^{\ell_k}H^{-3}\big(H^2D-(D\eta)(D\eta)^T\big)\,d\sigma .
 \]
-Put $u=D^{1/2}w$ and $v=D^{1/2}\eta$, so $|v|^2=H^2-1$. Cauchy--Schwarz gives
-$\langle v,u\rangle^2\le(H^2-1)|u|^2$, hence
+Put $u=D^{1/2}v$ and $z=D^{1/2}\eta$, so $|z|^2=H^2-1$. Cauchy--Schwarz gives
+$\langle z,u\rangle^2\le(H^2-1)|u|^2$, hence
 \[
-\int_{1/t}^1\!\sigma^{\ell_k}H^{-3}|u|^2d\sigma\le-\langle\nabla^2\Phi\,w,w\rangle
+\int_{1/t}^1\!\sigma^{\ell_k}H^{-3}|u|^2d\sigma\le-\langle\nabla^2\Phi\,v,v\rangle
 \le\int_{1/t}^1\!\sigma^{\ell_k}H^{-1}|u|^2d\sigma .
 \]
 \begin{minipage}[c]{0.6\linewidth}
@@ -334,18 +334,18 @@ $\sigma^{\ell_j-\ell_k}\gg1$. On the $\eta_j$ axis,
 \]
 as $t\to\infty$, as soon as the exponent is below $-1$.
 
-\lab{cTeal}{The cure.} Measure derivatives in units of $|\eta_j|$: put $w_j=1$ if $j$ is good
-and $w_j=|\eta_j|$ if $j$ is bad.
+\lab{cTeal}{The cure.} Measure derivatives in units of $|\eta_j|$: put $v_j=1$ if $j$ is good
+and $v_j=|\eta_j|$ if $j$ is bad.
 \begin{keybox}[cTeal]
 \lab{cTeal}{Lemma 3 (derivatives).} Let $|\alpha|\ge2$ with $\alpha$ supported in $\cO$, and
 write $\alpha=\delta_i+\delta_j+\alpha'$ with $i,j\in\cO$ and $\alpha'\ge0$. Then for $t\ge2$,
 \[
-|\partial_\eta^\alpha\Phi|=|\partial_\eta^\alpha G|\le C_\alpha\prod_{m\ne k}w_m^{-\alpha'_m}.
+|\partial_\eta^\alpha\Phi|=|\partial_\eta^\alpha G|\le C_\alpha\prod_{m\ne k}v_m^{-\alpha'_m}.
 \]
 \end{keybox}
 \lab{cTeal}{Why.} With $\mu_m=\sigma^{\ell_m-\ell_k}$ and $y_m=\mu_m\eta_m$, $H=(1+|y|^2)^{1/2}$
 behaves like a function homogeneous of degree one, so
-$|\partial_\eta^\alpha H|\le C\mu^\alpha H^{1-|\alpha|}$. Each factor $\mu_m/H\le w_m^{-1}$:
+$|\partial_\eta^\alpha H|\le C\mu^\alpha H^{1-|\alpha|}$. Each factor $\mu_m/H\le v_m^{-1}$:
 for good $m$, $\mu_m\le1\le H$, and for bad $m$, $H\ge\mu_m|\eta_m|$. The two factors for
 $i,j$ are paid by
 \[
@@ -424,7 +424,7 @@ variables in $S\cup\cT$ are frozen and integrated last.
 $a_0\ge c^{|A|}$ & Lemma 2 on $|\eta|\le3\sqrt d$; a principal submatrix of a matrix
 $\ge cI$ is $\ge cI$\\
 injective & Lemma 2: $\tilde\Phi$ is strictly concave in $\omega_A$\\
-$\tilde M\le C$ & Lemma 3: $\lambda^{1/2}w_m=\lambda^{1/2}\ge1$ if $m$ good,
+$\tilde M\le C$ & Lemma 3: $\lambda^{1/2}v_m=\lambda^{1/2}\ge1$ if $m$ good,
 $=|\omega_m|\ge1$ off the strips\\
 $\tilde N\le C$ & $t^{-\kappa_j/2}|\xi_k|^{1/2}\le\sqrt2$ for $j\in\cO$\\
 \end{tabular}}
@@ -503,7 +503,7 @@ $k$, $\eta_j$, $\lambda$ & sector, chart ratios, large parameter $t^{\ell_k+1}|\
 $G$, $H$, $\Phi$, $b$ & normal form, its integrand, inner phase, amplitude & 1\\
 $\kappa_j$ & $2\ell_j-\ell_k+1$; its sign decides the type of direction $j$ & A\\
 $\cO$, $\cT$, $\cB$ & oscillatory, non-oscillatory, bad oscillatory & A\\
-$w_j$ & derivative weight: $1$ if good, $|\eta_j|$ if bad & 3\\
+$v_j$ & derivative weight: $1$ if good, $|\eta_j|$ if bad & 3\\
 $\omega$, $\tilde\Phi$, $\tilde b$ & zoomed variable, phase, amplitude & 4\\
 $\vartheta$, $S$, $A$, $W_j$ & strip cutoff, strip set, active set, width in $\cT$ & 5\\
 \end{tabular}}

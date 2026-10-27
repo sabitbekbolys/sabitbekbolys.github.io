@@ -208,26 +208,26 @@ form the second derivatives read
 -\nabla_\eta^2\Phi
 =\int_{1/t}^1\sigma^{\ell_k}H^{-3}\Big(H^2D-(D\eta)(D\eta)^{T}\Big)\,d\sigma .
 \]
-Fix $w\in\R^{d-1}$ and put $v=D^{1/2}\eta$, $u=D^{1/2}w$. Then
-$\langle Dw,w\rangle=|u|^2$, $\langle D\eta,w\rangle=\langle v,u\rangle$, and
-$|v|^2=\langle D\eta,\eta\rangle=H^2-1$. Hence
+Fix $v\in\R^{d-1}$ and put $z=D^{1/2}\eta$, $u=D^{1/2}v$. Then
+$\langle Dv,v\rangle=|u|^2$, $\langle D\eta,v\rangle=\langle z,u\rangle$, and
+$|z|^2=\langle D\eta,\eta\rangle=H^2-1$. Hence
 \[
--\langle\nabla_\eta^2\Phi\,w,w\rangle
-=\int_{1/t}^1\sigma^{\ell_k}H^{-3}\Big(H^2|u|^2-\langle v,u\rangle^2\Big)\,d\sigma .
+-\langle\nabla_\eta^2\Phi\,v,v\rangle
+=\int_{1/t}^1\sigma^{\ell_k}H^{-3}\Big(H^2|u|^2-\langle z,u\rangle^2\Big)\,d\sigma .
 \]
-By Cauchy--Schwarz, $\langle v,u\rangle^2\le|v|^2|u|^2=(H^2-1)|u|^2$, so the
+By Cauchy--Schwarz, $\langle z,u\rangle^2\le|z|^2|u|^2=(H^2-1)|u|^2$, so the
 bracket lies between $|u|^2$ and $H^2|u|^2$. Writing
 \[
-S(\sigma,w)=|u|^2=\sum_{j\ne k}\sigma^{2(\ell_j-\ell_k)}w_j^2 ,
+S(\sigma,v)=|u|^2=\sum_{j\ne k}\sigma^{2(\ell_j-\ell_k)}v_j^2 ,
 \]
 we arrive at the two-sided bound
 \[
 \int_{1/t}^1\sigma^{\ell_k}H^{-3}\,S\,d\sigma
-\;\le\;-\langle\nabla_\eta^2\Phi\,w,w\rangle\;\le\;
+\;\le\;-\langle\nabla_\eta^2\Phi\,v,v\rangle\;\le\;
 \int_{1/t}^1\sigma^{\ell_k}H^{-1}\,S\,d\sigma .
 \]
 
-\paragraph{Strict concavity.} For $w\ne0$ the left side is positive. So
+\paragraph{Strict concavity.} For $v\ne0$ the left side is positive. So
 $-\nabla_\eta^2\Phi$ is positive definite and $\Phi$ is strictly concave in $\eta$,
 for every $t$, $x$ and $\xi_k$.
 
@@ -235,11 +235,11 @@ for every $t$, $x$ and $\xi_k$.
 $-\nabla_\eta^2\Phi\ge cI$ on a ball $|\eta|\le R$, with $c$ independent of $t$.
 Since the integrand is nonnegative and $t\ge2$, we may restrict the integral to
 $\sigma\in[\tfrac12,1]$. There $\sigma^{\ell_k}$ and each $\sigma^{2(\ell_j-\ell_k)}$
-lie between two positive constants, so $S\ge c|w|^2$, and $H\le C_R$ when
+lie between two positive constants, so $S\ge c|v|^2$, and $H\le C_R$ when
 $|\eta|\le R$. Hence
 \[
--\langle\nabla_\eta^2\Phi(\eta)\,w,w\rangle
-\ \ge\ \int_{1/2}^1\sigma^{\ell_k}H^{-3}\,S\,d\sigma\ \ge\ c_R\,|w|^2
+-\langle\nabla_\eta^2\Phi(\eta)\,v,v\rangle
+\ \ge\ \int_{1/2}^1\sigma^{\ell_k}H^{-3}\,S\,d\sigma\ \ge\ c_R\,|v|^2
 \qquad(|\eta|\le R),
 \]
 with $c_R>0$ depending only on $R$, $d$ and the $\ell_j$.
@@ -302,7 +302,7 @@ We write $\mathcal O$ for the set of oscillatory directions. Every good directio
 oscillatory, since then $2\ell_j-\ell_k+1\ge\ell_k+1>0$. So a non-oscillatory
 direction is bad. We define the weights
 \[
-w_j(\eta)=1\ \ (j\text{ good}),\qquad w_j(\eta)=|\eta_j|\ \ (j\text{ bad}).
+v_j(\eta)=1\ \ (j\text{ good}),\qquad v_j(\eta)=|\eta_j|\ \ (j\text{ bad}).
 \]
 
 \paragraph{Why the direct bound fails.} High derivatives in a bad direction blow up
@@ -316,7 +316,7 @@ Since $\ell_j<\ell_k$, the exponent is below $-1$ for $N$ large, and the integra
 tends to infinity as $t\to\infty$. The reason is a crossover: near $\eta_j=0$ the
 coordinate $j$ dominates $H$ at early times $\sigma\sim1/t$, where
 $\sigma^{\ell_j-\ell_k}$ is huge. Away from $\eta_j=0$ this does not happen, and the
-weight $w_j=|\eta_j|$ measures how far away we are.
+weight $v_j=|\eta_j|$ measures how far away we are.
 
 \subsection{The weighted bound}
 
@@ -332,14 +332,14 @@ Two simple facts control each factor $\mu_m/H$:
 	\item if $m$ is good, then $\mu_m\le1\le H$, so $\mu_m/H\le1$;
 	\item if $m$ is bad, then $H\ge\mu_m|\eta_m|$, so $\mu_m/H\le|\eta_m|^{-1}$.
 \end{itemize}
-In both cases $\mu_m/H\le w_m^{-1}$.
+In both cases $\mu_m/H\le v_m^{-1}$.
 
 \begin{lemma}\label{lem:weighted}
 	Let $|\alpha|\ge2$ with $\alpha_m=0$ for $m\notin\mathcal O$, and choose
 	$i,j\in\mathcal O$ (possibly $i=j$) such that $\alpha'=\alpha-\delta_i-\delta_j$
 	has nonnegative entries. Then for $t\ge2$,
 	\[
-	\big|\partial_\eta^\alpha G(t,\eta)\big|\le C_\alpha\prod_{m\ne k}w_m(\eta)^{-\alpha'_m}.
+	\big|\partial_\eta^\alpha G(t,\eta)\big|\le C_\alpha\prod_{m\ne k}v_m(\eta)^{-\alpha'_m}.
 	\]
 \end{lemma}
 
@@ -351,7 +351,7 @@ good directions cost nothing.
 	Since $|\alpha|=|\alpha'|+2$, we can split the bound for $\partial_\eta^\alpha H$ as
 	\[
 	\mu^\alpha H^{1-|\alpha|}=\frac{\mu_i\mu_j}{H}\,\prod_{m\ne k}\Big(\frac{\mu_m}{H}\Big)^{\alpha'_m}
-	\le\frac{\mu_i\mu_j}{H}\,\prod_{m\ne k}w_m^{-\alpha'_m}.
+	\le\frac{\mu_i\mu_j}{H}\,\prod_{m\ne k}v_m^{-\alpha'_m}.
 	\]
 	The product on the right does not depend on $\sigma$. It remains to integrate the
 	first factor against $\sigma^{\ell_k}d\sigma$. Using $H\ge1$ and
@@ -373,10 +373,10 @@ $\lambda^{-1/2}$. Zoom to this scale by setting $\omega=\lambda^{1/2}\eta$. Then
 \]
 and Lemma~\ref{lem:weighted} gives
 \[
-\big|\partial_\omega^\alpha(\lambda G)\big|\le C_\alpha\prod_{m\ne k}\big(\lambda^{1/2}w_m\big)^{-\alpha'_m}.
+\big|\partial_\omega^\alpha(\lambda G)\big|\le C_\alpha\prod_{m\ne k}\big(\lambda^{1/2}v_m\big)^{-\alpha'_m}.
 \]
-For good $m$ we have $\lambda^{1/2}w_m=\lambda^{1/2}\ge1$, and for bad $m$ we have
-$\lambda^{1/2}w_m=|\omega_m|$. So all $\omega$-derivatives of $\lambda G$ are
+For good $m$ we have $\lambda^{1/2}v_m=\lambda^{1/2}\ge1$, and for bad $m$ we have
+$\lambda^{1/2}v_m=|\omega_m|$. So all $\omega$-derivatives of $\lambda G$ are
 bounded as long as $|\omega_m|\ge1$ in the bad directions, that is,
 $|\eta_m|\ge\lambda^{-1/2}$. This suggests the following splitting of the $\eta$
 integral, which is carried out in Section~\ref{sec:proof}:
@@ -612,10 +612,10 @@ supported in $A\subset\mathcal O$. Then $\partial^\alpha\Phi=-\partial^\alpha G$
 and Step~1 together with Lemma~\ref{lem:weighted} gives
 \[
 |\partial_\omega^\alpha\tilde\Phi|=\lambda^{1-|\alpha|/2}|\partial_\eta^\alpha G|
-\le C\prod_{m}\big(\lambda^{1/2}w_m\big)^{-\alpha'_m}.
+\le C\prod_{m}\big(\lambda^{1/2}v_m\big)^{-\alpha'_m}.
 \]
-For good $m$, $\lambda^{1/2}w_m=\lambda^{1/2}\ge1$. For bad $m\in A$, that is
-$m\in\mathcal B\setminus S$, we have $\lambda^{1/2}w_m=|\omega_m|$, and
+For good $m$, $\lambda^{1/2}v_m=\lambda^{1/2}\ge1$. For bad $m\in A$, that is
+$m\in\mathcal B\setminus S$, we have $\lambda^{1/2}v_m=|\omega_m|$, and
 $|\omega_m|\ge1$ on $\tilde K_1$: the factor $1-\psi(\omega_m)$ vanishes for
 $|\omega_m|\le2$, and $\tilde K_1$ extends the support by sup distance $1$. So every
 factor is at most $1$, and $\tilde M_{|A|+2}\le C$.
