@@ -6,6 +6,7 @@
    Usage:  <canvas id="wave"></canvas>            — full hero surface
            <canvas id="wave" data-variant="banner"> — smaller page banner
    Move the pointer across the surface to disturb the membrane.
+   Line colours are read from the --wave-* variables in css/style.css.
    ========================================================================== */
 
 (function () {
@@ -78,12 +79,15 @@
   function project(t) {
     var yaw = -0.26 + Math.sin(t * 0.00005) * 0.07 + pointerX * 0.05;
     var cy = Math.cos(yaw), sy = Math.sin(yaw);
-    var camH = (banner ? 0.78 : 0.95) + pointerY * 0.06;
+    var camH0 = banner ? 0.78 : 0.95;
+    var camH = camH0 + pointerY * 0.06;
     var D = banner ? 2.1 : 2.35;                 // camera distance to grid centre
     var SX = 2.6, SY = banner ? 1.6 : 1.55;      // world half-extents
     var f = Math.min(W * 0.75, H * 1.15);
     var cxs = W * 0.5;
-    var horizon = H * (banner ? -0.15 : 0.10);
+    // hero: far edge of the membrane ~18% down the canvas on any aspect
+    // ratio (on phones f is set by the narrow width, which flattens depth)
+    var horizon = banner ? 0 : H * 0.18 - camH0 * f / (D + SY);
     var inv = 2 / (N - 1);
 
     for (var i = 0; i < N; i++) {
@@ -105,25 +109,35 @@
 
   /* ---------------- drawing ---------------- */
 
-  // teal → violet across depth
+  // "r, g, b" triplets from CSS; the fallbacks match the default palette
+  function readRGB(name, fallback) {
+    var v = getComputedStyle(document.documentElement).getPropertyValue(name);
+    var m = v && v.match(/(\d+)\D+(\d+)\D+(\d+)/);
+    return m ? [+m[1], +m[2], +m[3]] : fallback;
+  }
+  var NEAR = readRGB("--wave-near", [15, 125, 106]);
+  var FAR = readRGB("--wave-far", [90, 73, 201]);
+  var DEPTH_STYLE = "rgba(" + readRGB("--wave-depth", [60, 80, 120]).join(",") + ",0.08)";
+
+  // near colour → far colour across depth
   function rowColor(k, alpha) {
-    var r = Math.round(100 + (154 - 100) * k);
-    var g = Math.round(227 + (140 - 227) * k);
-    var b = Math.round(193 + (245 - 193) * k);
+    var r = Math.round(NEAR[0] + (FAR[0] - NEAR[0]) * k);
+    var g = Math.round(NEAR[1] + (FAR[1] - NEAR[1]) * k);
+    var b = Math.round(NEAR[2] + (FAR[2] - NEAR[2]) * k);
     return "rgba(" + r + "," + g + "," + b + "," + alpha + ")";
   }
 
+  // ink on paper: dark translucent lines, nearer rows stronger
   function draw() {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, W, H);
     ctx.lineWidth = 1;
-    ctx.globalCompositeOperation = "lighter";
 
     var i, j, idx;
     // lines along x (rows) — the main "sheet", far to near
     for (i = N - 1; i >= 0; i--) {
       var k = i / (N - 1);                 // 0 = near, 1 = far
-      ctx.strokeStyle = rowColor(k, 0.08 + 0.34 * (1 - k));
+      ctx.strokeStyle = rowColor(k, (banner ? 0.16 : 0.10) + 0.40 * (1 - k));
       ctx.beginPath();
       idx = i * N;
       ctx.moveTo(px[idx], py[idx]);
@@ -131,14 +145,13 @@
       ctx.stroke();
     }
     // converging depth-lines
+    ctx.strokeStyle = DEPTH_STYLE;
     for (j = 0; j < N; j += 4) {
-      ctx.strokeStyle = "rgba(148,168,210,0.06)";
       ctx.beginPath();
       ctx.moveTo(px[j], py[j]);
       for (i = 1; i < N; i++) ctx.lineTo(px[i * N + j], py[i * N + j]);
       ctx.stroke();
     }
-    ctx.globalCompositeOperation = "source-over";
   }
 
   /* ---------------- sizing ---------------- */
