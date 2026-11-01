@@ -30,6 +30,9 @@ visible.
 | `js/wave.js` | The wave-equation simulation + 3-D renderer (hero and banner variants) |
 | `assets/photo.jpg` | Profile photo |
 | `assets/favicon.svg` | Browser-tab icon (∂ over a wave) |
+| `robots.txt` | Tells search engines and AI crawlers (ChatGPT, Perplexity, Claude…) they are welcome, and where the sitemap is |
+| `sitemap.xml` | List of the five pages, submitted in Google Search Console and Bing Webmaster Tools — add a line here if you ever add a page |
+| `llms.txt` | Plain-text profile with the full publication and media lists, for AI agents |
 | `BingSiteAuth.xml` | Proves site ownership to Bing Webmaster Tools — keep it, and don't rename or move it |
 | `google11c7081b25a57503.html` | Proves site ownership to Google Search Console — keep it, and don't rename or move it |
 
@@ -68,6 +71,14 @@ name stays inside `<strong>…</strong>`.
   `frame()`.
 - The top bar and footer are repeated in each of the five HTML files — if you
   change them (e.g. a new email), change them in all five.
+- **Machine-readable copies:** `llms.txt` and the structured-data block at
+  the top of each page (`<script type="application/ld+json">`) repeat your
+  details and the paper, press and video lists for search engines and AI
+  tools. Don't edit them by hand: they are regenerated from the visible
+  lists by a script kept outside the published site
+  (`.claude/tools/machine_readable.py`). If you add entries yourself, the
+  visible lists are what counts; the copies catch up the next time they are
+  regenerated.
 
 ## Updating the live site (GitHub website)
 
