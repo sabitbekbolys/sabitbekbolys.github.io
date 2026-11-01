@@ -30,6 +30,8 @@ visible.
 | `js/wave.js` | The wave-equation simulation + 3-D renderer (hero and banner variants) |
 | `assets/photo.jpg` | Profile photo |
 | `assets/favicon.svg` | Browser-tab icon (∂ over a wave) |
+| `BingSiteAuth.xml` | Proves site ownership to Bing Webmaster Tools — keep it, and don't rename or move it |
+| `google11c7081b25a57503.html` | Proves site ownership to Google Search Console — keep it, and don't rename or move it |
 
 ## How to edit
 
@@ -49,6 +51,7 @@ with a copy-paste template right there:
 | Change the featured papers | `index.html` | `UPDATE SELECTED PUBLICATIONS` |
 | Add a course | `teaching.html` | `ADD NEW COURSE` |
 | Add a video | `outreach.html` | `ADD NEW VIDEO` |
+| Add a press article | `outreach.html` | `ADD NEW ARTICLE` |
 | Add a position / award | `cv.html` | `ADD NEW POSITION` |
 
 In every list the newest entry goes first, numbering is automatic, and your
