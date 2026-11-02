@@ -26,12 +26,13 @@ visible.
 | `teaching.html` | Lecturing, TA positions, mentoring |
 | `outreach.html` | Media appearances and interviews (YouTube embeds) |
 | `cv.html` | Positions, education, awards |
+| `kk/` | Kazakh version of the same five pages (қазақша нұсқасы) — the EN \| ҚАЗ switch in the top bar jumps between the two versions of a page |
 | `css/style.css` | All styling — colours and fonts in the `:root` variables at the top |
 | `js/wave.js` | The wave-equation simulation + 3-D renderer (hero and banner variants) |
 | `assets/photo.jpg` | Profile photo |
 | `assets/favicon.svg` | Browser-tab icon (∂ over a wave) |
 | `robots.txt` | Tells search engines and AI crawlers (ChatGPT, Perplexity, Claude…) they are welcome, and where the sitemap is |
-| `sitemap.xml` | List of the five pages, submitted in Google Search Console and Bing Webmaster Tools — add a line here if you ever add a page |
+| `sitemap.xml` | List of all ten pages (English and Kazakh), submitted in Google Search Console and Bing Webmaster Tools — add a line here if you ever add a page |
 | `llms.txt` | Plain-text profile with the full publication and media lists, for AI agents |
 | `BingSiteAuth.xml` | Proves site ownership to Bing Webmaster Tools — keep it, and don't rename or move it |
 | `google11c7081b25a57503.html` | Proves site ownership to Google Search Console — keep it, and don't rename or move it |
@@ -71,6 +72,13 @@ name stays inside `<strong>…</strong>`.
   `frame()`.
 - The top bar and footer are repeated in each of the five HTML files — if you
   change them (e.g. a new email), change them in all five.
+- **Kazakh version (`kk/`):** the paper lists on `kk/publications.html` and
+  the "selected" list on `kk/index.html` are copied from the English pages
+  (with status words such as "Submitted" translated), so add papers to the
+  English pages only. Everything else in Kazakh — news, courses, media, CV —
+  is edited directly in the `kk/` files; each list there has a ✏️ comment
+  in Kazakh. When you change an English page, the Kazakh page doesn't change
+  by itself.
 - **Machine-readable copies:** `llms.txt` and the structured-data block at
   the top of each page (`<script type="application/ld+json">`) repeat your
   details and the paper, press and video lists for search engines and AI

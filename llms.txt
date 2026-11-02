@@ -2,7 +2,7 @@
 
 > Bolys Sabitbek is a mathematician working in the analysis of partial differential equations, currently a postdoctoral researcher at the Ghent Analysis & PDE Center, Ghent University, Belgium. His research covers hyperbolic equations and systems with multiplicities, PDEs with singular and rough coefficients, functional inequalities on stratified Lie groups, and global existence and blow-up of solutions to nonlinear PDEs.
 
-The name is also written Sabitbek Bolys or B. Sabitbek, and in Kazakh Болыс Сәбитбек. Official website: https://sabitbekbolys.github.io/
+The name is also written Sabitbek Bolys or B. Sabitbek, and in Kazakh Болыс Сәбитбек. Official website: https://sabitbekbolys.github.io/ (Kazakh-language version: https://sabitbekbolys.github.io/kk/)
 
 - Current position: Postdoctoral Researcher, Ghent Analysis & PDE Center, Department of Mathematics: Analysis, Logic and Discrete Mathematics, Ghent University, Belgium.
 - Previous position: Postdoctoral Research Assistant, School of Mathematical Sciences, Queen Mary University of London, UK, funded by EPSRC grant EP/V005529/1, working with Claudia Garetto and Michael Ruzhansky.
@@ -19,6 +19,7 @@ The name is also written Sabitbek Bolys or B. Sabitbek, and in Kazakh Болыс
 - [Teaching](https://sabitbekbolys.github.io/teaching.html): courses taught at Queen Mary University of London, Kazakh National University and Satbayev University, and master's students supervised
 - [Outreach](https://sabitbekbolys.github.io/outreach.html): interviews, newspaper articles and TV features on mathematics, science and AI, in English and Kazakh
 - [CV](https://sabitbekbolys.github.io/cv.html): positions, education and awards
+- [Қазақша нұсқасы / Kazakh version](https://sabitbekbolys.github.io/kk/): the same pages in Kazakh
 
 ## Research profiles
 
