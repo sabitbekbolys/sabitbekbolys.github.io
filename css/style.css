@@ -392,6 +392,14 @@ h3:first-child { margin-top: 0; }
 }
 .sub-label:first-child { margin-top: 0; }
 
+/* one-line description under a group heading (publications by topic) */
+.group-intro {
+  font-size: 0.97rem;
+  color: var(--muted);
+  max-width: 46rem;
+  margin: -0.6rem 0 1.1rem;
+}
+
 /* --------------------------------------------------------------------------
    About block
    -------------------------------------------------------------------------- */
