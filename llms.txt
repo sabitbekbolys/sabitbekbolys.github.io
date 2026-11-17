@@ -33,20 +33,28 @@ The name is also written Sabitbek Bolys or B. Sabitbek, and in Kazakh Болыс
 - [GitHub](https://github.com/sabitbekbolys)
 - [LinkedIn](https://www.linkedin.com/in/bolys-sabitbek-09938878/)
 
-## Publications
+## Publications (grouped by topic)
 
-### Journal articles
+### Hyperbolic equations with multiplicities and singular coefficients
 
+- [Hyperbolic systems with non-diagonalisable principal part and variable multiplicities, IV: time-dependent characteristics, representation of solutions and regularity](https://arxiv.org/abs/2611.21585): M. Ruzhansky, B. Sabitbek. Preprint (2026).
 - [Asymptotics and scattering for critically weakly hyperbolic and singular systems](https://doi.org/10.1016/j.aim.2026.111212): B. Sabitbek, A. Shao. Advances in Mathematics, 503, 111212 (2026). arXiv:2506.11348.
-- [Potential wells and thresholds for a strongly damped p-Laplacian wave equation](https://doi.org/10.3934/dcdss.2026106): B. Sabitbek. Discrete and Continuous Dynamical Systems – S (2026).
+- On higher order hyperbolic Cauchy problems with variable multiplicities and (t, x)-dependent coefficients: C. Garetto, B. Sabitbek. Submitted (2025).
 - [C^∞ well-posedness of higher order hyperbolic pseudo-differential equations with multiplicities](https://doi.org/10.1007/s10440-025-00717-x): C. Garetto, B. Sabitbek. Acta Applicandae Mathematicae, 196, 4 (2025). arXiv:2405.04927.
-- [Hardy and Rellich inequalities with Bessel pairs](https://doi.org/10.1017/s0013091524000051): M. Ruzhansky, B. Sabitbek. Proceedings of the Edinburgh Mathematical Society (2025). arXiv:2101.07008.
 - [Hyperbolic systems with non-diagonalisable principal part and variable multiplicities, III: singular coefficients](https://doi.org/10.1007/s00208-023-02792-7): C. Garetto, B. Sabitbek. Mathematische Annalen (2024). arXiv:2305.12832.
+
+### Global existence and blow-up for nonlinear evolution equations
+
+- [Potential wells and thresholds for a strongly damped p-Laplacian wave equation](https://doi.org/10.3934/dcdss.2026106): B. Sabitbek. Discrete and Continuous Dynamical Systems – S (2026).
 - [Global existence and blow-up of solutions to the double nonlinear porous medium equation](https://doi.org/10.3934/dcds.2023124): B. Sabitbek, B. Torebek. Discrete and Continuous Dynamical Systems, 44(3), 743–767 (2024). arXiv:2104.06896.
 - [Blow-up solutions of damped Klein–Gordon equation on the Heisenberg group](https://doi.org/10.1007/s40879-023-00654-9): M. Ruzhansky, B. Sabitbek. European Journal of Mathematics, 9, 61 (2023). arXiv:2205.02705.
 - [Global existence and nonexistence of solutions for semilinear wave equation with a new condition](https://doi.org/10.3934/dcds.2023023): B. Sabitbek. Discrete and Continuous Dynamical Systems (2023). arXiv:2111.11334.
 - [Global existence and blow-up of solutions to porous medium equation and pseudo-parabolic equation, I. Stratified groups](https://doi.org/10.1007/s00229-022-01390-2): M. Ruzhansky, B. Sabitbek, B. Torebek. Manuscripta Mathematica (2022). arXiv:2106.00406.
 - [Blow-up theorems for p-sub-Laplacian heat operators on stratified groups](https://doi.org/10.1007/s11785-022-01235-6): G. Oralsyn, B. Sabitbek. Complex Analysis and Operator Theory, 16, 99 (2022).
+
+### Hardy, Rellich and Sobolev inequalities on Lie groups
+
+- [Hardy and Rellich inequalities with Bessel pairs](https://doi.org/10.1017/s0013091524000051): M. Ruzhansky, B. Sabitbek. Proceedings of the Edinburgh Mathematical Society (2025). arXiv:2101.07008.
 - [Geometric Hardy inequalities on starshaped sets](https://doi.org/10.68381/jca28053): M. Ruzhansky, B. Sabitbek, D. Suragan. Journal of Convex Analysis, 28 (2021). arXiv:1902.03723.
 - [Principal frequency of p-versions of sub-Laplacian for general vector fields](https://doi.org/10.4171/zaa/1674): M. Ruzhansky, B. Sabitbek, D. Suragan. Zeitschrift für Analysis und ihre Anwendungen, 40, no. 1, 97–109 (2021). arXiv:2008.05999.
 - [Geometric Hardy and Hardy–Sobolev inequalities on Heisenberg groups](https://doi.org/10.1142/s1664360720500162): M. Ruzhansky, B. Sabitbek, D. Suragan. Bulletin of Mathematical Sciences, 10, no. 3, 2050016 (2020). arXiv:1811.07181.
@@ -56,15 +64,13 @@ The name is also written Sabitbek Bolys or B. Sabitbek, and in Kazakh Болыс
 - [Weighted L^p-Hardy and L^p-Rellich inequalities with boundary terms on stratified Lie groups](https://doi.org/10.1007/s13163-018-0268-3): M. Ruzhansky, B. Sabitbek, D. Suragan. Revista Matemática Complutense, 32, 19–35 (2019). arXiv:1707.06754.
 - [On Green functions for Dirichlet sub-Laplacians on a quaternion Heisenberg group](https://doi.org/10.1051/mmnp/2018042): B. Sabitbek, D. Suragan. Mathematical Modelling of Natural Phenomena, 39 (2018).
 - [Horizontal weighted Hardy–Rellich type inequality on stratified Lie groups](https://doi.org/10.1007/s11785-017-0650-z): B. Sabitbek, D. Suragan. Complex Analysis and Operator Theory, 12(6), 1469–1480 (2018).
-- Orbit design for a Phobos–Deimos cycler mission: B. Sabitbek, B. Gunter. Advances in the Astronautical Sciences (2018).
 - On Hardy and Rellich type inequalities for the Grushin operator: T. Sh. Kalmenov, B. Sabitbek. Mathematical Journal, 18, no. 2(68), 133–142 (2018).
 - Hardy and Rellich type inequalities on the complex affine group: B. Sabitbek, D. Suragan. Eurasian Mathematical Journal, 8(2), 31–39 (2017).
 - Embedding theorem of Sobolev type spaces on stratified Lie groups: B. Sabitbek. Mathematical Journal, 16, no. 3(61), 166–180 (2016).
 
-### Preprints
+### Aerospace engineering
 
-- [Hyperbolic systems with non-diagonalisable principal part and variable multiplicities, IV: time-dependent characteristics, representation of solutions and regularity](https://arxiv.org/abs/2611.21585): M. Ruzhansky, B. Sabitbek. Preprint (2026).
-- On higher order hyperbolic Cauchy problems with variable multiplicities and (t, x)-dependent coefficients: C. Garetto, B. Sabitbek. Submitted (2025).
+- Orbit design for a Phobos–Deimos cycler mission: B. Sabitbek, B. Gunter. Advances in the Astronautical Sciences (2018).
 
 ## Media and outreach
 

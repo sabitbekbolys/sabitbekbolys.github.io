@@ -48,9 +48,8 @@ with a copy-paste template right there:
 
 | You want to… | File | Search for |
 | --- | --- | --- |
-| Add a preprint | `publications.html` | `ADD NEW PREPRINT` |
-| Add a journal article | `publications.html` | `ADD NEW JOURNAL ARTICLE` |
-| Move a published preprint | `publications.html` | `PAPER GOT PUBLISHED` |
+| Add a paper (into its topic group) | `publications.html` | `ADD NEW PAPER` |
+| Preprint got published | `publications.html` | `HOW TO EDIT` (rule 3: change its venue line) |
 | Add a news item | `index.html` | `ADD NEWS` |
 | Change the featured papers | `index.html` | `UPDATE SELECTED PUBLICATIONS` |
 | Add a course | `teaching.html` | `ADD NEW COURSE` |
